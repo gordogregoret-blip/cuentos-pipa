@@ -28,7 +28,7 @@ func after_each() -> void:
 
 
 func _settle() -> void:
-	await wait_seconds(0.15)
+	await wait_until(func() -> bool: return not player.is_transitioning() and player.narrator.is_running(), 3.0)
 
 
 func test_defaults_match_spec() -> void:
@@ -39,7 +39,8 @@ func test_defaults_match_spec() -> void:
 
 func test_opens_on_first_page_and_narrates_by_itself() -> void:
 	assert_eq(player.state.current, "p1")
-	await _settle()
+	assert_false(player.narrator.is_running(), "espera 300 ms antes de leer")
+	await wait_until(func() -> bool: return player.narrator.is_running(), 3.0)
 	assert_true(player.narrator.is_running(), "el relato arranca solo")
 
 

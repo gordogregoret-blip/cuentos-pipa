@@ -10,6 +10,7 @@ var data: StoryData
 var characters: Dictionary = {}  # id -> nodo (CharacterRig o Sprite2D)
 var tappables: Array = []
 var pipa: CharacterRig
+var pendant: PendantView
 
 
 func _init() -> void:
@@ -48,6 +49,10 @@ func _add_character(ch: Dictionary) -> void:
 		node = rig
 		if id == "pipa":
 			pipa = rig
+			pendant = PendantView.new()
+			pendant.position = Vector2(0, -150)
+			pendant.scale = Vector2(1.3, 1.3)
+			rig.add_child(pendant)
 	else:
 		var s := Sprite2D.new()
 		s.texture = _tex(id)
@@ -62,6 +67,14 @@ func _add_character(ch: Dictionary) -> void:
 	characters[id] = node
 	if node is CharacterRig and ch.has("state"):
 		(node as CharacterRig).set_state.call_deferred(StringName(ch["state"]))
+
+
+## Color del colgante; con animate cambia con fundido y Pipa pone la cara de esa emoción.
+func set_pendant(color: String, animate: bool = false) -> void:
+	if pendant:
+		pendant.set_color(color, animate)
+	if pipa and animate:
+		pipa.set_state(Pendant.rig_state(color))
 
 
 func _add_tappable(def: Dictionary) -> void:

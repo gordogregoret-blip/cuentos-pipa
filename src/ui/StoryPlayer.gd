@@ -19,6 +19,8 @@ var page_view: PageView
 var text_panel: PanelContainer
 var text_label: RichTextLabel
 var last_transition: StringName = &""
+var pendant_color: String = "amarillo"
+var hint := HintTimer.new(6.0)
 
 var _layer: Control
 var _transitioning: bool = false
@@ -70,6 +72,7 @@ func _ready() -> void:
 	narrator.name = "Narrator"
 	add_child(narrator)
 	narrator.word.connect(_highlight)
+	narrator.word.connect(_on_word)
 	narrator.finished.connect(_on_narration_finished)
 	refresh_settings()
 	get_viewport().size_changed.connect(_apply_safe_area)
@@ -81,6 +84,7 @@ func open(story_dir: String, resume: Dictionary = {}) -> bool:
 	if data == null:
 		return false
 	state = StoryState.new(data)
+	pendant_color = "amarillo"
 	if resume.is_empty() or not state.from_dict(resume):
 		state.start()
 	_show_page(&"none")
@@ -143,6 +147,8 @@ func _show_page(direction: StringName) -> void:
 	page_view = PageView.new()
 	page_view.build(data, state.current)
 	page_view.tapped.connect(_on_tapped)
+	page_view.set_pendant(pendant_color)
+	hint.touch()
 	_set_text(-1)
 	_update_controls()
 	Store.set_resume(data.id, state.to_dict())
@@ -203,10 +209,47 @@ func _start_narration() -> void:
 func _on_narration_finished() -> void:
 	_narration_done = true
 	_set_taps_locked(false)
+	_apply_pendant(1.0)
+	hint.touch()
 	narration_finished.emit()
 
 
+func _on_word(_i: int) -> void:
+	if narrator.duration > 0.0:
+		_apply_pendant(narrator.clock / narrator.duration)
+
+
+func _apply_pendant(fraction: float) -> void:
+	var c := Pendant.due(state.page().get("pendant", []), fraction)
+	if c != "" and c != pendant_color:
+		pendant_color = c
+		page_view.set_pendant(c, true)
+
+
+func _process(delta: float) -> void:
+	tick_hint(delta)
+
+
+## Pista de Lumi: 6 s sin tocar nada después del relato.
+func tick_hint(dt: float) -> void:
+	if not _narration_done or _transitioning or Audio.paused or page_view == null:
+		return
+	if hint.tick(dt):
+		var pick: Tappable = null
+		for t in page_view.tappables:
+			if t.times_tapped == 0 and not t.locked:
+				pick = t
+				break
+		if pick == null and not page_view.tappables.is_empty():
+			pick = page_view.tappables[0]
+		if pick:
+			pick.show_hint(true)
+
+
 func _on_tapped(def: Dictionary) -> void:
+	hint.touch()
+	for t in page_view.tappables:
+		t.show_hint(false)
 	if def.has("flag"):
 		state.set_flag(def["flag"])
 		Store.set_resume(data.id, state.to_dict())
