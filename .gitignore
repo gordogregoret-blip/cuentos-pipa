@@ -1,0 +1,17 @@
+# Godot
+.godot/
+*.translation
+# Build y herramientas locales
+build/
+.tools/
+/android/
+# Secretos: NUNCA al repo
+*.keystore
+*.jks
+.env
+release.env
+# Python
+__pycache__/
+.pytest_cache/
+# Espacio de trabajo de planes
+.superpowers/

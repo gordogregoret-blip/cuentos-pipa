@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python:
+    name: Validador y herramientas (pytest)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r tools/requirements.txt
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: python -m pytest tools/tests -q
+      - name: Validar cuentos
+        run: python tools/validate.py stories --trees docs/trees --check-trees
+
+  godot:
+    name: Tests de Godot (GUT headless)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .tools
+          key: godot-4.7
+      - run: tools/setup_godot.sh
+      - name: Importar proyecto
+        run: .tools/bin/godot --headless --import || true
+      - name: Correr GUT
+        run: .tools/bin/godot --headless -s addons/gut/gut_cmdln.gd -gexit 2>&1 | tee gut.log; grep -q "Failing Tests" gut.log && exit 1 || true; grep -q "Passing Tests" gut.log

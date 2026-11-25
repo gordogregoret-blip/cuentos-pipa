@@ -1,0 +1,44 @@
+; Engine configuration file.
+
+config_version=5
+
+[application]
+
+config/name="Cuentos del pueblo de Pipa"
+config/description="Cuentos interactivos de elegí tu propia aventura en el pueblo de Pipa"
+config/version="0.1.0"
+run/main_scene="res://src/Main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+config/quit_on_go_back=false
+
+[audio]
+
+buses/default_bus_layout="res://default_bus_layout.tres"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/fallback="es"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.85, 0.933, 0.894, 1)
+textures/vram_compression/import_etc2_astc=true
