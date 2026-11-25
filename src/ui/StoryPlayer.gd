@@ -18,6 +18,8 @@ var controls: Controls
 var page_view: PageView
 var text_panel: PanelContainer
 var text_label: RichTextLabel
+var decision_cards: DecisionCards
+var closing: Closing
 var last_transition: StringName = &""
 var pendant_color: String = "amarillo"
 var hint := HintTimer.new(6.0)
@@ -60,6 +62,15 @@ func _ready() -> void:
 	text_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	text_panel.add_child(text_label)
 	add_child(text_panel)
+
+	decision_cards = DecisionCards.new()
+	decision_cards.chosen.connect(choose)
+	add_child(decision_cards)
+	closing = Closing.new()
+	closing.read_again.connect(_read_again)
+	closing.other_path.connect(_other_path)
+	closing.to_plaza.connect(func() -> void: exit_requested.emit())
+	add_child(closing)
 
 	controls = Controls.new()
 	add_child(controls)
@@ -149,9 +160,15 @@ func _show_page(direction: StringName) -> void:
 	page_view.tapped.connect(_on_tapped)
 	page_view.set_pendant(pendant_color)
 	hint.touch()
+	decision_cards.close()
+	closing.close()
 	_set_text(-1)
 	_update_controls()
-	Store.set_resume(data.id, state.to_dict())
+	if state.kind() == &"closing":
+		Store.add_seed(data.id)
+		Store.clear_resume(data.id)
+	else:
+		Store.set_resume(data.id, state.to_dict())
 	var ending := state.ending()
 	if not ending.is_empty():
 		Store.record_ending(data.id, ending["id"])
@@ -211,7 +228,31 @@ func _on_narration_finished() -> void:
 	_set_taps_locked(false)
 	_apply_pendant(1.0)
 	hint.touch()
+	match state.kind():
+		&"decision":
+			decision_cards.show_options(data, state.current)
+		&"closing":
+			closing.show_closing(data)
+		&"end_preview":
+			Store.clear_resume(data.id)
+			closing.show_preview()
 	narration_finished.emit()
+
+
+func _read_again() -> void:
+	if _transitioning:
+		return
+	Store.clear_resume(data.id)
+	state.start()
+	pendant_color = "amarillo"
+	_show_page(&"forward")
+
+
+func _other_path() -> void:
+	if _transitioning:
+		return
+	if state.rewind_to_last_decision():
+		_show_page(&"back")
 
 
 func _on_word(_i: int) -> void:
