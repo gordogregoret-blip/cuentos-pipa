@@ -10,6 +10,11 @@ var data: Dictionary = SaveData.defaults()
 
 func _ready() -> void:
 	load_now()
+	apply_locale()
+
+
+func apply_locale() -> void:
+	TranslationServer.set_locale(String(setting("locale")))
 
 
 func load_now() -> void:
@@ -28,6 +33,8 @@ func setting(key: String) -> Variant:
 func set_setting(key: String, value: Variant) -> void:
 	data["settings"][key] = value
 	save()
+	if key == "locale":
+		apply_locale()
 
 
 func set_age(age: int) -> void:

@@ -1,0 +1,55 @@
+keys,es,en
+PAGE_OF,%d de %d,%d of %d
+BTN_BACK,Atrás,Back
+BTN_NEXT,Siguiente,Next
+BTN_REPEAT,Repetir,Repeat
+BTN_CALM,Rincón de calma,Calm corner
+BTN_PLAZA,Volver a la plaza,Back to the square
+BTN_ADULT,Adultos,Grown-ups
+BTN_START,Empezar,Start
+BTN_CONTINUE,Seguir donde estaba,Continue where I was
+BTN_READ_AGAIN,Leer otra vez,Read again
+BTN_OTHER_PATH,Probar otro camino,Try another path
+BTN_BACK_TO_STORY,Volver al cuento,Back to the story
+BTN_YES,Sí,Yes
+BTN_NO,No,No
+COMING_SOON,Próximamente,Coming soon
+TO_BE_CONTINUED,Continuará,To be continued
+HOW_DID_YOU_FEEL,¿Cómo te sentiste?,How did you feel?
+EXIT_QUESTION,¿Salir?,Leave?
+FIRST_RUN_TITLE,¡Hola! Antes de empezar,Hello! Before we start
+FIRST_RUN_AGE,¿Cuántos años tiene quien va a leer?,How old is the reader?
+FIRST_RUN_LEVEL,Nivel de texto sugerido: %s,Suggested text level: %s
+LEVEL_simple,Simple,Simple
+LEVEL_cuento,Cuento,Story
+LEVEL_aventura,Aventura,Adventure
+GATE_HOLD,Mantené apretado este botón,Press and hold this button
+GATE_ORDER,Tocá los números del 1 al 3 en orden,Tap the numbers 1 to 3 in order
+ADULT_TITLE,Panel de adultos,Grown-ups panel
+ADULT_LEVEL,Nivel de texto,Text level
+ADULT_AGE,Edad,Age
+ADULT_VOL_VOZ,Volumen de la voz,Voice volume
+ADULT_VOL_EFECTOS,Volumen de los efectos,Sound effects volume
+ADULT_VOL_MUSICA,Volumen de la música,Music volume
+ADULT_SPEED,Velocidad del relato,Narration speed
+ADULT_CALM,Modo calma (menos movimiento),Calm mode (less motion)
+ADULT_SUBTITLES,Subtítulos,Subtitles
+ADULT_LOCK,Tocables solo después del relato,Touchables only after narration
+ADULT_TURN,Girar la hoja,Turn the page
+ADULT_TURN_button,Con botón,With a button
+ADULT_TURN_swipe,Deslizando,By swiping
+ADULT_EASY_FONT,Letra de lectura fácil,Easy-reading font
+ADULT_ENDINGS,Finales descubiertos,Endings found
+ADULT_PRIVACY,Política de privacidad,Privacy policy
+ADULT_MORE,Más cuentos,More stories
+ADULT_CONTACT,Contacto,Contact
+ADULT_ERASE,Borrar progreso,Erase progress
+ADULT_ERASE_CONFIRM,¿Borrar finales y semillas? Los ajustes quedan.,Erase endings and seeds? Settings stay.
+ADULT_CLOSE,Cerrar,Close
+ADULT_LANGUAGE,Idioma,Language
+EMO_amarillo,Alegría,Joy
+EMO_azul,Tristeza,Sadness
+EMO_rojo,Enojo,Anger
+EMO_violeta,Sorpresa,Surprise
+EMO_verde,Calma,Calm
+EMO_naranja,Miedo,Fear

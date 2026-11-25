@@ -122,3 +122,13 @@ func test_level_follows_age_unless_set() -> void:
 func test_resume_to_missing_page_is_rejected() -> void:
 	var st := StoryState.new(StoryData.load_from("res://test/fixtures/stories/mini"))
 	assert_false(st.from_dict({"page": "pagina_borrada", "history": [], "flags": []}))
+
+
+func test_locale_defaults_to_spanish() -> void:
+	var s := _store()
+	s.apply_locale()
+	assert_eq(TranslationServer.get_locale().substr(0, 2), "es")
+	assert_eq(tr("BTN_NEXT"), "Siguiente")
+	s.set_setting("locale", "en")
+	assert_eq(tr("BTN_NEXT"), "Next")
+	s.set_setting("locale", "es")

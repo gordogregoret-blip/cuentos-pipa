@@ -85,3 +85,29 @@ func ending_ids() -> Array[String]:
 		if e.has("id"):
 			out.append(e["id"])
 	return out
+
+
+## Páginas del recorrido más largo (para el indicador "3 de 7").
+func path_length() -> int:
+	var memo := {}
+	return _depth(start, memo)
+
+
+func _depth(pid: String, memo: Dictionary) -> int:
+	if memo.has(pid):
+		return memo[pid]
+	memo[pid] = 1  # corta ciclos (el validador ya los rechaza)
+	var p := page(pid)
+	var best := 0
+	var dests: Array = []
+	if p.get("next") != null and p.has("next"):
+		dests.append(p["next"])
+	if p.has("secret_next"):
+		dests.append(p["secret_next"])
+	for o in p.get("decision", {}).get("options", []):
+		dests.append(o["to"])
+	for d in dests:
+		if has_page(d):
+			best = maxi(best, _depth(d, memo))
+	memo[pid] = 1 + best
+	return memo[pid]
