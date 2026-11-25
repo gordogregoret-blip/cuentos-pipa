@@ -82,7 +82,10 @@ func top_overlay() -> Control:
 
 ## Atrás: primero cierra la capa de arriba; si no hay, la pantalla decide.
 func handle_back() -> void:
-	if top_overlay():
+	var top := top_overlay()
+	if top:
+		if top.has_method("handle_back") and top.handle_back():
+			return
 		close_overlay()
 		return
 	if current is StoryPlayer:
@@ -95,11 +98,39 @@ func handle_back() -> void:
 
 
 func open_calm() -> void:
-	pass  # Etapa 8
+	var p := current as StoryPlayer
+	if p:
+		p.hold()
+	Audio.stop_all()
+	var c := CalmCorner.new()
+	c.tree_exited.connect(func() -> void:
+		if is_instance_valid(p) and p == current:
+			p.resume_after_hold())
+	open_overlay(c)
 
 
 func open_adult() -> void:
-	pass  # Etapa 8
+	var gate := ParentGate.new()
+	gate.passed.connect(func() -> void:
+		close_overlay(gate)
+		var panel := AdultPanel.new()
+		panel.index = index
+		panel.settings_changed.connect(_apply_settings)
+		panel.tree_exited.connect(_apply_settings)
+		open_overlay(panel))
+	open_overlay(gate)
+
+
+func _apply_settings() -> void:
+	if not is_inside_tree():
+		return
+	theme = UiTheme.build(Store.setting("easy_font"))
+	Motion.reduced = Store.setting("calm")
+	Audio.apply_settings()
+	if current is Library:
+		(current as Library).refresh()
+	elif current is StoryPlayer:
+		(current as StoryPlayer).refresh_settings()
 
 
 func _notification(what: int) -> void:

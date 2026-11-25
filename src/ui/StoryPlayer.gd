@@ -30,6 +30,7 @@ var _swipe := SwipeDetector.new()
 var _words: PackedStringArray = []
 var _narration_done: bool = false
 var _delay: SceneTreeTimer
+var _held: bool = false
 
 
 func _ready() -> void:
@@ -138,6 +139,24 @@ func repeat() -> void:
 	_start_narration()
 
 
+## Rincón de calma: se detiene el relato y la pista de Lumi.
+func hold() -> void:
+	_held = true
+	narrator.stop()
+	if _delay:
+		_delay.timeout.disconnect(_start_narration)
+		_delay = null
+
+
+## "Volver al cuento": la página se vuelve a leer desde el principio.
+func resume_after_hold() -> void:
+	_held = false
+	hint.touch()
+	if not _transitioning:
+		_delay = get_tree().create_timer(narration_delay)
+		_delay.timeout.connect(_start_narration)
+
+
 func refresh_settings() -> void:
 	Motion.reduced = Store.setting("calm")
 	text_panel.visible = Store.setting("subtitles")
@@ -215,6 +234,8 @@ func _end_transition() -> void:
 
 func _start_narration() -> void:
 	_delay = null
+	if _held:
+		return
 	var level := Store.level()
 	_narration_done = false
 	_set_text(-1)
@@ -273,7 +294,7 @@ func _process(delta: float) -> void:
 
 ## Pista de Lumi: 6 s sin tocar nada después del relato.
 func tick_hint(dt: float) -> void:
-	if not _narration_done or _transitioning or Audio.paused or page_view == null:
+	if not _narration_done or _transitioning or _held or Audio.paused or page_view == null:
 		return
 	if hint.tick(dt):
 		var pick: Tappable = null
