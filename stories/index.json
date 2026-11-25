@@ -1,0 +1,10 @@
+{"stories": [
+  {"id": "dino", "title": "El huevo que brillaba", "door_color": "#7FC28E", "locked": false},
+  {"id": "granja", "title": "El gallo que despertaba al sol", "door_color": "#FFD86B", "locked": false},
+  {"id": "selva", "title": "La selva que perdió su canción", "door_color": "#5BB5A8", "locked": true},
+  {"id": "relojes", "title": "Bolita y la ciudad de los relojes", "door_color": "#6FA8DC", "locked": true},
+  {"id": "cofre", "title": "El cofre de la abuela Tuga", "door_color": "#C8693B", "locked": true},
+  {"id": "luna", "title": "Un amigo en la Luna", "door_color": "#B38FD9", "locked": true},
+  {"id": "estrellas", "title": "Las estrellas dormilonas", "door_color": "#8C9BD6", "locked": true},
+  {"id": "fiesta", "title": "La gran fiesta del Árbol", "door_color": "#F2836B", "locked": true}
+]}

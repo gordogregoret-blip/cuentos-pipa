@@ -1,0 +1,1212 @@
+{
+  "schema": 1,
+  "id": "dino",
+  "title": "El huevo que brillaba",
+  "cast": [
+    "pipa",
+    "fido",
+    "bubu"
+  ],
+  "message": "Lo distinto no da miedo cuando lo conocés.",
+  "start": "p1",
+  "door_color": "#7FC28E",
+  "secret": {
+    "requires": [
+      "huella_1",
+      "huella_2",
+      "huella_3"
+    ],
+    "page": "s6"
+  },
+  "pages": {
+    "p1": {
+      "background": "art/bg_plaza.svg",
+      "text": {
+        "simple": "Pipa, Fido y Bubu están en la plaza. La puerta verde se abre. Sale un huevo que brilla. El colgante está violeta. Pipa está sorprendida.",
+        "cuento": "Pipa, Fido y Bubu juegan en la plaza, al lado del Árbol de las Puertas. De pronto, la puerta verde se abre despacio. Un huevo grande rueda hasta los pies de Pipa. ¡El huevo brilla! El colgante está violeta. Pipa está sorprendida.",
+        "aventura": "Es una mañana tranquila en la plaza del pueblo. Pipa, Fido y Bubu juegan al lado del Árbol de las Puertas. De pronto se escucha un ruido suave: la puerta verde se abre despacio. Un huevo grande y redondo rueda por el pasto y se detiene a los pies de Pipa. El huevo brilla con una luz tibia. El colgante está violeta. Pipa está sorprendida."
+      },
+      "pendant": [
+        {
+          "color": "violeta",
+          "at": 0.72
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.3,
+          "y": 0.77,
+          "scale": 0.45,
+          "state": "sorpresa"
+        },
+        {
+          "id": "bubu",
+          "x": 0.13,
+          "y": 0.77,
+          "scale": 0.42
+        }
+      ],
+      "tappables": [
+        {
+          "id": "huevo",
+          "art": "art/huevo.svg",
+          "x": 0.5,
+          "y": 0.6,
+          "size": 200,
+          "anim": "grow",
+          "sfx": "sfx/brillo.ogg",
+          "word": "¡Brilla! El huevo"
+        },
+        {
+          "id": "puerta",
+          "art": "art/puerta_verde.svg",
+          "x": 0.72,
+          "y": 0.4,
+          "size": 260,
+          "anim": "wiggle",
+          "sfx": "sfx/puerta.ogg",
+          "word": "La puerta verde"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.86,
+          "y": 0.6,
+          "size": 260,
+          "anim": "hop",
+          "sfx": "sfx/guau.ogg",
+          "word": "¡Guau! Fido"
+        },
+        {
+          "id": "huella_dorada",
+          "art": "art/huella_dorada.svg",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 120,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "¡Una huella dorada!",
+          "flag": "huella_1"
+        }
+      ],
+      "next": "p2"
+    },
+    "p2": {
+      "background": "art/bg_valle.svg",
+      "text": {
+        "simple": "Fido huele el suelo. Encuentra huellas grandes. Son huellas de dinosaurio. El colgante está amarillo. Pipa está contenta. Hay dos caminos.",
+        "cuento": "Fido acerca la nariz al suelo y huele. ¡Encuentra huellas grandes! Son huellas de dinosaurio. Pipa quiere devolver el huevo a su mamá. El colgante está amarillo. Pipa está contenta. Hay dos caminos: el río de las burbujas y el bosque que canta.",
+        "aventura": "Detrás de la puerta verde hay un valle con plantas gigantes. Fido acerca la nariz al suelo y huele con mucha atención. ¡Encuentra huellas enormes, con tres dedos! Son huellas de dinosaurio. Pipa decide devolver el huevo a su mamá. El colgante está amarillo. Pipa está contenta. Fido encuentra dos caminos: uno va por el río de las burbujas y el otro va por el bosque que canta."
+      },
+      "pendant": [
+        {
+          "color": "amarillo",
+          "at": 0.62
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42
+        },
+        {
+          "id": "fido",
+          "x": 0.37,
+          "y": 0.77,
+          "scale": 0.36
+        },
+        {
+          "id": "bubu",
+          "x": 0.11,
+          "y": 0.77,
+          "scale": 0.4
+        }
+      ],
+      "tappables": [
+        {
+          "id": "huellas",
+          "art": "art/huellas.svg",
+          "x": 0.55,
+          "y": 0.62,
+          "size": 220,
+          "anim": "grow",
+          "sfx": "sfx/paso.ogg",
+          "word": "Huellas de dinosaurio"
+        },
+        {
+          "id": "helecho",
+          "art": "art/helecho.svg",
+          "x": 0.78,
+          "y": 0.38,
+          "size": 240,
+          "anim": "wiggle",
+          "sfx": "sfx/hojas.ogg",
+          "word": "Un helecho gigante"
+        },
+        {
+          "id": "huevo",
+          "art": "art/huevo.svg",
+          "x": 0.42,
+          "y": 0.42,
+          "size": 150,
+          "anim": "grow",
+          "sfx": "sfx/brillo.ogg",
+          "word": "El huevo brilla"
+        },
+        {
+          "id": "nariz",
+          "art": "cast:fido",
+          "x": 0.66,
+          "y": 0.3,
+          "size": 180,
+          "anim": "hop",
+          "sfx": "sfx/olfato.ogg",
+          "word": "Fido huele"
+        }
+      ],
+      "decision": {
+        "options": [
+          {
+            "text": "Por el río de las burbujas",
+            "image": "art/op_rio.svg",
+            "to": "a3"
+          },
+          {
+            "text": "Por el bosque que canta",
+            "image": "art/op_bosque.svg",
+            "to": "b3"
+          }
+        ]
+      }
+    },
+    "a3": {
+      "background": "art/bg_rio.svg",
+      "text": {
+        "simple": "El río es ancho. El colgante está naranja. Pipa está nerviosa. Tina, la triceratops bebé, los lleva en su lomo. El colgante está amarillo. Pipa está contenta.",
+        "cuento": "El río de las burbujas es ancho y profundo. El colgante está naranja. Pipa está nerviosa. Entonces llega Tina, una triceratops bebé. Tina dice: “Suban a mi lomo, yo los llevo”. Todos cruzan el río sobre Tina. El colgante está amarillo. Pipa está contenta.",
+        "aventura": "El río de las burbujas es ancho y profundo. Del agua salen burbujas redondas que suben y explotan sin ruido. Pipa no sabe cómo cruzar. El colgante está naranja. Pipa está nerviosa. Entonces se acerca Tina, una triceratops bebé con tres cuernos cortos. Tina dice: “Suban a mi lomo. Yo sé cruzar”. Pipa, Fido y Bubu suben con cuidado y cruzan el río sobre Tina. El colgante está amarillo. Pipa está contenta."
+      },
+      "pendant": [
+        {
+          "color": "naranja",
+          "at": 0.25
+        },
+        {
+          "color": "amarillo",
+          "at": 0.9
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.22,
+          "y": 0.75,
+          "scale": 0.4
+        },
+        {
+          "id": "bubu",
+          "x": 0.09,
+          "y": 0.76,
+          "scale": 0.38
+        }
+      ],
+      "tappables": [
+        {
+          "id": "tina",
+          "art": "art/tina.svg",
+          "x": 0.55,
+          "y": 0.55,
+          "size": 360,
+          "anim": "hop",
+          "sfx": "sfx/paso.ogg",
+          "word": "¡Hola! Soy Tina"
+        },
+        {
+          "id": "burbuja",
+          "art": "art/burbuja.svg",
+          "x": 0.78,
+          "y": 0.3,
+          "size": 140,
+          "anim": "float",
+          "sfx": "sfx/burbuja.ogg",
+          "word": "¡Plop! Una burbuja"
+        },
+        {
+          "id": "pez",
+          "art": "art/pez.svg",
+          "x": 0.84,
+          "y": 0.62,
+          "size": 170,
+          "anim": "wiggle",
+          "sfx": "sfx/agua.ogg",
+          "word": "Un pez naranja"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.36,
+          "y": 0.45,
+          "size": 180,
+          "anim": "hop",
+          "sfx": "sfx/guau.ogg",
+          "word": "¡Guau! Fido"
+        },
+        {
+          "id": "huella_dorada",
+          "art": "art/huella_dorada.svg",
+          "x": 0.66,
+          "y": 0.18,
+          "size": 120,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "¡Una huella dorada!",
+          "flag": "huella_2"
+        }
+      ],
+      "next": "a4"
+    },
+    "a4": {
+      "background": "art/bg_cascada.svg",
+      "text": {
+        "simple": "Llegan a una cascada muy alta. El nido está arriba. El colgante está violeta. Pipa está sorprendida. Pueden subir por las piedras o pedirle ayuda a Brachi.",
+        "cuento": "Tina los deja al lado de una cascada muy alta. Fido huele: el nido de la mamá del huevo está arriba. El colgante está violeta. Pipa está sorprendida. Hay piedras que forman una escalera. También está Brachi, un braquiosaurio de cuello largo.",
+        "aventura": "Tina los deja al pie de una cascada muy alta. El agua cae con un ruido fuerte y constante. Fido levanta la nariz y huele: el nido de la mamá del huevo está arriba de la cascada. El colgante está violeta. Pipa está sorprendida. Al costado hay piedras planas que forman una escalera. Un poco más lejos come hojas Brachi, un braquiosaurio de cuello muy largo."
+      },
+      "pendant": [
+        {
+          "color": "violeta",
+          "at": 0.5
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42
+        },
+        {
+          "id": "fido",
+          "x": 0.37,
+          "y": 0.77,
+          "scale": 0.36
+        },
+        {
+          "id": "bubu",
+          "x": 0.11,
+          "y": 0.77,
+          "scale": 0.4
+        }
+      ],
+      "tappables": [
+        {
+          "id": "cascada",
+          "art": "art/cascada.svg",
+          "x": 0.58,
+          "y": 0.35,
+          "size": 260,
+          "anim": "float",
+          "sfx": "sfx/agua.ogg",
+          "word": "La cascada"
+        },
+        {
+          "id": "piedra",
+          "art": "art/piedra.svg",
+          "x": 0.46,
+          "y": 0.66,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/paso.ogg",
+          "word": "Una piedra plana"
+        },
+        {
+          "id": "brachi",
+          "art": "art/brachi.svg",
+          "x": 0.82,
+          "y": 0.42,
+          "size": 340,
+          "anim": "float",
+          "sfx": "sfx/hojas.ogg",
+          "word": "Brachi come hojas"
+        },
+        {
+          "id": "arcoiris",
+          "art": "art/arcoiris.svg",
+          "x": 0.42,
+          "y": 0.2,
+          "size": 200,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "Un arcoíris"
+        }
+      ],
+      "decision": {
+        "options": [
+          {
+            "text": "Subir paso a paso por las piedras",
+            "image": "art/op_piedras.svg",
+            "to": "p5_pasos"
+          },
+          {
+            "text": "Pedirle ayuda a Brachi",
+            "image": "art/op_brachi.svg",
+            "to": "p5_brachi"
+          }
+        ]
+      }
+    },
+    "b3": {
+      "background": "art/bg_bosque.svg",
+      "text": {
+        "simple": "En el bosque aparece Rex. Rex es enorme. El colgante está naranja. Pipa tiene miedo. Bubu dice: “Tranqui… yo también soy grandote”. El colgante está verde. Pipa está tranquila.",
+        "cuento": "Los árboles del bosque suenan con el viento. Detrás de un árbol aparece Rex. Rex es enorme y mira el piso con vergüenza. El colgante está naranja. Pipa tiene miedo. Bubu se pone al lado de Rex y dice: “Tranqui… yo también soy grandote”. Rex sonríe un poco. El colgante está verde. Pipa está tranquila.",
+        "aventura": "En este bosque, el viento pasa entre las hojas y los árboles hacen un sonido parecido a una canción. De pronto, detrás de un árbol, aparece Rex, un tiranosaurio enorme. Rex no ruge: mira el piso y se esconde un poco, porque es tímido. Pero es tan grande que Pipa se asusta. El colgante está naranja. Pipa tiene miedo. Bubu camina despacio hasta Rex y le dice: “Tranqui… yo también soy grandote”. Rex sonríe un poco. El colgante está verde. Pipa está tranquila."
+      },
+      "pendant": [
+        {
+          "color": "naranja",
+          "at": 0.38
+        },
+        {
+          "color": "verde",
+          "at": 0.92
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.2,
+          "y": 0.77,
+          "scale": 0.4
+        },
+        {
+          "id": "fido",
+          "x": 0.32,
+          "y": 0.77,
+          "scale": 0.34
+        }
+      ],
+      "tappables": [
+        {
+          "id": "rex",
+          "art": "art/rex.svg",
+          "x": 0.7,
+          "y": 0.45,
+          "size": 420,
+          "anim": "wiggle",
+          "sfx": "sfx/rugido_suave.ogg",
+          "word": "Rex es tímido"
+        },
+        {
+          "id": "bubu",
+          "art": "cast:bubu",
+          "x": 0.47,
+          "y": 0.55,
+          "size": 260,
+          "anim": "hop",
+          "sfx": "sfx/abrazo.ogg",
+          "word": "Bubu da abrazos"
+        },
+        {
+          "id": "arbol",
+          "art": "art/arbol_canta.svg",
+          "x": 0.12,
+          "y": 0.35,
+          "size": 240,
+          "anim": "wiggle",
+          "sfx": "sfx/campanitas.ogg",
+          "word": "El árbol suena"
+        },
+        {
+          "id": "huella_dorada",
+          "art": "art/huella_dorada.svg",
+          "x": 0.36,
+          "y": 0.2,
+          "size": 120,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "¡Una huella dorada!",
+          "flag": "huella_2"
+        }
+      ],
+      "next": "b4"
+    },
+    "b4": {
+      "background": "art/bg_bosque.svg",
+      "text": {
+        "simple": "Rex sabe dónde está el nido. Rex quiere ir con ellos. Pueden ir con Rex o ir solos.",
+        "cuento": "Rex dice con voz bajita: “Yo sé dónde está el nido de mamá Ptera”. Fido mueve la cola. Pipa piensa. Pueden ir con Rex, o pueden ir solos y después presentarle a Rex a mamá Ptera.",
+        "aventura": "Rex habla con una voz muy bajita: “Yo sé dónde está el nido de mamá Ptera. Está en la montaña”. Fido mueve la cola. Bubu le da una palmadita a Rex. Pipa piensa con calma. Los otros dinosaurios no conocen bien a Rex y a veces se asustan cuando lo ven. Pueden ir todos juntos con Rex, o pueden ir solos primero y después presentarle a Rex a mamá Ptera."
+      },
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42
+        },
+        {
+          "id": "fido",
+          "x": 0.37,
+          "y": 0.77,
+          "scale": 0.36
+        },
+        {
+          "id": "bubu",
+          "x": 0.11,
+          "y": 0.77,
+          "scale": 0.4
+        }
+      ],
+      "tappables": [
+        {
+          "id": "rex",
+          "art": "art/rex.svg",
+          "x": 0.72,
+          "y": 0.45,
+          "size": 400,
+          "anim": "hop",
+          "sfx": "sfx/rugido_suave.ogg",
+          "word": "Rex saluda"
+        },
+        {
+          "id": "montana",
+          "art": "art/montana.svg",
+          "x": 0.45,
+          "y": 0.22,
+          "size": 240,
+          "anim": "float",
+          "sfx": "sfx/viento.ogg",
+          "word": "La montaña"
+        },
+        {
+          "id": "mariposa",
+          "art": "art/mariposa.svg",
+          "x": 0.52,
+          "y": 0.5,
+          "size": 130,
+          "anim": "float",
+          "sfx": "sfx/aleteo.ogg",
+          "word": "Una mariposa azul"
+        },
+        {
+          "id": "huevo",
+          "art": "art/huevo.svg",
+          "x": 0.38,
+          "y": 0.6,
+          "size": 140,
+          "anim": "grow",
+          "sfx": "sfx/brillo.ogg",
+          "word": "El huevo brilla"
+        }
+      ],
+      "decision": {
+        "options": [
+          {
+            "text": "Ir con Rex",
+            "image": "art/op_rex.svg",
+            "to": "p5_rex"
+          },
+          {
+            "text": "Ir solos y después presentarle a Rex",
+            "image": "art/op_solos.svg",
+            "to": "p5_amigo"
+          }
+        ]
+      }
+    },
+    "p5_pasos": {
+      "background": "art/bg_cascada.svg",
+      "text": {
+        "simple": "Suben despacio, una piedra por vez. Bubu lleva el huevo. Llegan arriba. El colgante está amarillo. Pipa está contenta.",
+        "cuento": "Pipa dice: “Vamos paso a paso”. Suben una piedra, y después otra, y después otra. Bubu lleva el huevo con mucho cuidado. Al final llegan arriba de la cascada. El colgante está amarillo. Pipa está contenta.",
+        "aventura": "Pipa mira la escalera de piedras y dice: “Vamos paso a paso”. Suben una piedra, y después otra, y después otra. Cuando se cansan, se sientan un ratito y respiran. Bubu lleva el huevo en sus brazos con mucho cuidado. Al final llegan arriba de la cascada. El colgante está amarillo. Pipa está contenta."
+      },
+      "pendant": [
+        {
+          "color": "amarillo",
+          "at": 0.85
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.3,
+          "y": 0.6,
+          "scale": 0.38
+        },
+        {
+          "id": "bubu",
+          "x": 0.16,
+          "y": 0.74,
+          "scale": 0.38
+        }
+      ],
+      "tappables": [
+        {
+          "id": "piedra",
+          "art": "art/piedra.svg",
+          "x": 0.45,
+          "y": 0.7,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/paso.ogg",
+          "word": "Un paso"
+        },
+        {
+          "id": "huevo",
+          "art": "art/huevo.svg",
+          "x": 0.58,
+          "y": 0.45,
+          "size": 150,
+          "anim": "grow",
+          "sfx": "sfx/brillo.ogg",
+          "word": "El huevo brilla"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.72,
+          "y": 0.62,
+          "size": 200,
+          "anim": "hop",
+          "sfx": "sfx/guau.ogg",
+          "word": "¡Guau! Fido"
+        },
+        {
+          "id": "huella_dorada",
+          "art": "art/huella_dorada.svg",
+          "x": 0.88,
+          "y": 0.2,
+          "size": 120,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "¡Una huella dorada!",
+          "flag": "huella_3"
+        }
+      ],
+      "next": "p6_pasos",
+      "secret_next": "s6"
+    },
+    "p5_brachi": {
+      "background": "art/bg_cascada.svg",
+      "text": {
+        "simple": "Pipa le pide ayuda a Brachi. Brachi baja su cuello largo. Todos suben. El colgante está amarillo. Pipa está contenta.",
+        "cuento": "Pipa se acerca a Brachi y dice: “¿Nos ayudás a subir, por favor?”. Brachi dice que sí y baja su cuello largo hasta el piso. Todos suben con cuidado. El colgante está amarillo. Pipa está contenta.",
+        "aventura": "Pipa respira hondo, se acerca a Brachi y le dice: “Hola, Brachi. Queremos llevar este huevo al nido de arriba. ¿Nos ayudás a subir, por favor?”. Brachi dice que sí. Baja su cuello largo hasta el piso y espera. Pipa, Fido y Bubu suben despacio por el cuello y Brachi los levanta hasta arriba de la cascada. El colgante está amarillo. Pipa está contenta."
+      },
+      "pendant": [
+        {
+          "color": "amarillo",
+          "at": 0.85
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.22,
+          "y": 0.75,
+          "scale": 0.4
+        },
+        {
+          "id": "fido",
+          "x": 0.33,
+          "y": 0.76,
+          "scale": 0.34
+        }
+      ],
+      "tappables": [
+        {
+          "id": "brachi",
+          "art": "art/brachi.svg",
+          "x": 0.62,
+          "y": 0.42,
+          "size": 380,
+          "anim": "float",
+          "sfx": "sfx/hojas.ogg",
+          "word": "Gracias, Brachi"
+        },
+        {
+          "id": "huevo",
+          "art": "art/huevo.svg",
+          "x": 0.42,
+          "y": 0.5,
+          "size": 150,
+          "anim": "grow",
+          "sfx": "sfx/brillo.ogg",
+          "word": "El huevo brilla"
+        },
+        {
+          "id": "bubu",
+          "art": "cast:bubu",
+          "x": 0.1,
+          "y": 0.62,
+          "size": 200,
+          "anim": "hop",
+          "sfx": "sfx/abrazo.ogg",
+          "word": "Bubu sube"
+        },
+        {
+          "id": "huella_dorada",
+          "art": "art/huella_dorada.svg",
+          "x": 0.88,
+          "y": 0.2,
+          "size": 120,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "¡Una huella dorada!",
+          "flag": "huella_3"
+        }
+      ],
+      "next": "p6_brachi",
+      "secret_next": "s6"
+    },
+    "p5_rex": {
+      "background": "art/bg_montana.svg",
+      "text": {
+        "simple": "Van con Rex. Los dinosaurios se asustan. Rex saluda despacio. El colgante está amarillo. Pipa está contenta.",
+        "cuento": "Todos caminan con Rex hasta la montaña. Los dinosaurios ven a Rex y se asustan. Rex se agacha y saluda despacio. Pipa dice: “Rex es nuestro amigo”. El colgante está amarillo. Pipa está contenta.",
+        "aventura": "Todos caminan con Rex hasta la montaña. Rex da pasos cortos para no hacer ruido. Cuando los otros dinosaurios ven a Rex, se esconden detrás de las piedras. Rex se agacha, baja la cabeza y saluda despacio. Pipa explica: “Rex es nuestro amigo. Nos mostró el camino”. Los dinosaurios salen de a poco. El colgante está amarillo. Pipa está contenta."
+      },
+      "pendant": [
+        {
+          "color": "amarillo",
+          "at": 0.85
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.22,
+          "y": 0.76,
+          "scale": 0.4
+        },
+        {
+          "id": "bubu",
+          "x": 0.09,
+          "y": 0.76,
+          "scale": 0.38
+        }
+      ],
+      "tappables": [
+        {
+          "id": "rex",
+          "art": "art/rex.svg",
+          "x": 0.62,
+          "y": 0.45,
+          "size": 400,
+          "anim": "wiggle",
+          "sfx": "sfx/rugido_suave.ogg",
+          "word": "Rex saluda"
+        },
+        {
+          "id": "piedra",
+          "art": "art/piedra.svg",
+          "x": 0.82,
+          "y": 0.66,
+          "size": 150,
+          "anim": "bounce",
+          "sfx": "sfx/paso.ogg",
+          "word": "Una piedra"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.36,
+          "y": 0.62,
+          "size": 200,
+          "anim": "hop",
+          "sfx": "sfx/guau.ogg",
+          "word": "¡Guau! Fido"
+        },
+        {
+          "id": "huella_dorada",
+          "art": "art/huella_dorada.svg",
+          "x": 0.88,
+          "y": 0.2,
+          "size": 120,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "¡Una huella dorada!",
+          "flag": "huella_3"
+        }
+      ],
+      "next": "p6_rex",
+      "secret_next": "s6"
+    },
+    "p5_amigo": {
+      "background": "art/bg_montana.svg",
+      "text": {
+        "simple": "Van solos a la montaña. Rex los espera abajo. Encuentran el nido. El colgante está amarillo. Pipa está contenta.",
+        "cuento": "Pipa, Fido y Bubu suben solos a la montaña. Rex los espera abajo, al lado de un árbol. Fido huele y encuentra el nido de mamá Ptera. El colgante está amarillo. Pipa está contenta.",
+        "aventura": "Pipa, Fido y Bubu suben solos a la montaña. Rex se queda abajo, al lado de un árbol, y dice: “Los espero acá”. Fido huele el viento, sigue el olor y encuentra el nido de mamá Ptera entre unas rocas. Pipa piensa que después va a presentar a Rex. El colgante está amarillo. Pipa está contenta."
+      },
+      "pendant": [
+        {
+          "color": "amarillo",
+          "at": 0.85
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.76,
+          "scale": 0.4
+        },
+        {
+          "id": "bubu",
+          "x": 0.11,
+          "y": 0.76,
+          "scale": 0.38
+        }
+      ],
+      "tappables": [
+        {
+          "id": "nido",
+          "art": "art/nido.svg",
+          "x": 0.62,
+          "y": 0.5,
+          "size": 260,
+          "anim": "grow",
+          "sfx": "sfx/hojas.ogg",
+          "word": "El nido"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.4,
+          "y": 0.6,
+          "size": 200,
+          "anim": "hop",
+          "sfx": "sfx/olfato.ogg",
+          "word": "Fido huele"
+        },
+        {
+          "id": "rex_lejos",
+          "art": "art/rex.svg",
+          "x": 0.84,
+          "y": 0.66,
+          "size": 180,
+          "anim": "wiggle",
+          "sfx": "sfx/rugido_suave.ogg",
+          "word": "Rex espera"
+        },
+        {
+          "id": "huella_dorada",
+          "art": "art/huella_dorada.svg",
+          "x": 0.88,
+          "y": 0.2,
+          "size": 120,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "¡Una huella dorada!",
+          "flag": "huella_3"
+        }
+      ],
+      "next": "p6_amigo",
+      "secret_next": "s6"
+    },
+    "p6_pasos": {
+      "background": "art/bg_nido.svg",
+      "text": {
+        "simple": "Mamá Ptera los espera. Pipa le da el huevo. ¡Crac! Sale una ptera bebé. Paso a paso se llega lejos.",
+        "cuento": "Arriba de la cascada está mamá Ptera. Pipa le da el huevo. ¡Crac! El huevo se abre y sale una ptera bebé. Mamá Ptera dice: “Gracias por subir hasta acá”. Pipa sabe algo nuevo: paso a paso se llega lejos.",
+        "aventura": "Arriba de la cascada, mamá Ptera mira para todos lados. Está buscando su huevo. Pipa se acerca y se lo da. ¡Crac! El huevo se abre y sale una ptera bebé que mueve las alas. Mamá Ptera dice: “Gracias por subir hasta acá, piedra por piedra”. Pipa mira la escalera larga y piensa en todo lo que subieron. Paso a paso se llega lejos."
+      },
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42
+        },
+        {
+          "id": "fido",
+          "x": 0.37,
+          "y": 0.77,
+          "scale": 0.36
+        },
+        {
+          "id": "bubu",
+          "x": 0.11,
+          "y": 0.77,
+          "scale": 0.4
+        }
+      ],
+      "tappables": [
+        {
+          "id": "mama",
+          "art": "art/mama_ptera.svg",
+          "x": 0.62,
+          "y": 0.38,
+          "size": 360,
+          "anim": "float",
+          "sfx": "sfx/aleteo.ogg",
+          "word": "Mamá Ptera"
+        },
+        {
+          "id": "bebe",
+          "art": "art/ptera_bebe.svg",
+          "x": 0.5,
+          "y": 0.6,
+          "size": 170,
+          "anim": "hop",
+          "sfx": "sfx/pio.ogg",
+          "word": "¡Pío! La ptera bebé"
+        },
+        {
+          "id": "nido",
+          "art": "art/nido.svg",
+          "x": 0.78,
+          "y": 0.66,
+          "size": 200,
+          "anim": "grow",
+          "sfx": "sfx/hojas.ogg",
+          "word": "El nido"
+        }
+      ],
+      "ending": {
+        "id": "paso_a_paso",
+        "title": "Paso a paso se llega lejos"
+      },
+      "next": "p7"
+    },
+    "p6_brachi": {
+      "background": "art/bg_nido.svg",
+      "text": {
+        "simple": "Brachi los deja al lado del nido. Pipa le da el huevo a mamá Ptera. ¡Crac! Sale una ptera bebé. Pedir ayuda es de valientes.",
+        "cuento": "Brachi los deja al lado del nido. Mamá Ptera recibe el huevo. ¡Crac! Sale una ptera bebé. Mamá Ptera dice: “Gracias”. Pipa le dice a Brachi: “Gracias por ayudarnos”. Pedir ayuda es de valientes.",
+        "aventura": "Brachi baja la cabeza con cuidado y los deja justo al lado del nido. Mamá Ptera recibe el huevo con sus alas. ¡Crac! El huevo se abre y sale una ptera bebé. Mamá Ptera dice: “Gracias”. Pipa mira a Brachi y le dice: “Gracias por ayudarnos. Solos no podíamos subir”. Brachi está contento. Pedir ayuda es de valientes."
+      },
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42
+        },
+        {
+          "id": "fido",
+          "x": 0.37,
+          "y": 0.77,
+          "scale": 0.36
+        },
+        {
+          "id": "bubu",
+          "x": 0.11,
+          "y": 0.77,
+          "scale": 0.4
+        }
+      ],
+      "tappables": [
+        {
+          "id": "mama",
+          "art": "art/mama_ptera.svg",
+          "x": 0.62,
+          "y": 0.38,
+          "size": 360,
+          "anim": "float",
+          "sfx": "sfx/aleteo.ogg",
+          "word": "Mamá Ptera"
+        },
+        {
+          "id": "bebe",
+          "art": "art/ptera_bebe.svg",
+          "x": 0.5,
+          "y": 0.6,
+          "size": 170,
+          "anim": "hop",
+          "sfx": "sfx/pio.ogg",
+          "word": "¡Pío! La ptera bebé"
+        },
+        {
+          "id": "brachi",
+          "art": "art/brachi.svg",
+          "x": 0.85,
+          "y": 0.42,
+          "size": 300,
+          "anim": "float",
+          "sfx": "sfx/hojas.ogg",
+          "word": "Brachi"
+        }
+      ],
+      "ending": {
+        "id": "pedir_ayuda",
+        "title": "Pedir ayuda es de valientes"
+      },
+      "next": "p7"
+    },
+    "p6_rex": {
+      "background": "art/bg_nido.svg",
+      "text": {
+        "simple": "Rex lleva el huevo con cuidado. Mamá Ptera dice: “Gracias, Rex”. ¡Crac! Sale una ptera bebé. Rex es un gigante bueno.",
+        "cuento": "Rex lleva el huevo con mucho cuidado hasta el nido. Mamá Ptera se sorprende. Después dice: “Gracias, Rex”. ¡Crac! Sale una ptera bebé. Ahora todos saben que Rex es un gigante bueno.",
+        "aventura": "Rex lleva el huevo entre sus patas cortas, con mucho cuidado, hasta el nido. Mamá Ptera se sorprende al ver a un tiranosaurio tan grande. Rex le da el huevo despacio. Mamá Ptera dice: “Gracias, Rex”. ¡Crac! El huevo se abre y sale una ptera bebé. Los otros dinosaurios aplauden. Ahora todos saben que Rex es un gigante bueno."
+      },
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.22,
+          "y": 0.76,
+          "scale": 0.4
+        },
+        {
+          "id": "fido",
+          "x": 0.34,
+          "y": 0.77,
+          "scale": 0.34
+        }
+      ],
+      "tappables": [
+        {
+          "id": "mama",
+          "art": "art/mama_ptera.svg",
+          "x": 0.62,
+          "y": 0.38,
+          "size": 360,
+          "anim": "float",
+          "sfx": "sfx/aleteo.ogg",
+          "word": "Mamá Ptera"
+        },
+        {
+          "id": "bebe",
+          "art": "art/ptera_bebe.svg",
+          "x": 0.5,
+          "y": 0.6,
+          "size": 170,
+          "anim": "hop",
+          "sfx": "sfx/pio.ogg",
+          "word": "¡Pío! La ptera bebé"
+        },
+        {
+          "id": "rex",
+          "art": "art/rex.svg",
+          "x": 0.85,
+          "y": 0.48,
+          "size": 360,
+          "anim": "hop",
+          "sfx": "sfx/rugido_suave.ogg",
+          "word": "Rex, el gigante bueno"
+        }
+      ],
+      "ending": {
+        "id": "rex_gigante_bueno",
+        "title": "Rex, el gigante bueno"
+      },
+      "next": "p7"
+    },
+    "p6_amigo": {
+      "background": "art/bg_nido.svg",
+      "text": {
+        "simple": "Pipa le da el huevo a mamá Ptera. ¡Crac! Sale una ptera bebé. Después Pipa le presenta a Rex. Ahora son amigos.",
+        "cuento": "Pipa le da el huevo a mamá Ptera. ¡Crac! Sale una ptera bebé. Después Pipa dice: “Te quiero presentar a Rex. Él nos ayudó”. Mamá Ptera saluda a Rex. Ahora tienen un amigo nuevo.",
+        "aventura": "Pipa le da el huevo a mamá Ptera. ¡Crac! El huevo se abre y sale una ptera bebé. Después, Pipa le dice a mamá Ptera: “Te quiero presentar a alguien. Se llama Rex. Es grande, pero es tímido, y nos mostró el camino”. Rex se acerca despacio. Mamá Ptera lo mira, sonríe y lo saluda. Ahora Rex tiene un amigo nuevo, y mamá Ptera también."
+      },
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42
+        },
+        {
+          "id": "fido",
+          "x": 0.37,
+          "y": 0.77,
+          "scale": 0.36
+        },
+        {
+          "id": "bubu",
+          "x": 0.11,
+          "y": 0.77,
+          "scale": 0.4
+        }
+      ],
+      "tappables": [
+        {
+          "id": "mama",
+          "art": "art/mama_ptera.svg",
+          "x": 0.62,
+          "y": 0.38,
+          "size": 360,
+          "anim": "float",
+          "sfx": "sfx/aleteo.ogg",
+          "word": "Mamá Ptera"
+        },
+        {
+          "id": "bebe",
+          "art": "art/ptera_bebe.svg",
+          "x": 0.5,
+          "y": 0.6,
+          "size": 170,
+          "anim": "hop",
+          "sfx": "sfx/pio.ogg",
+          "word": "¡Pío! La ptera bebé"
+        },
+        {
+          "id": "rex",
+          "art": "art/rex.svg",
+          "x": 0.85,
+          "y": 0.5,
+          "size": 340,
+          "anim": "wiggle",
+          "sfx": "sfx/rugido_suave.ogg",
+          "word": "Rex saluda"
+        }
+      ],
+      "ending": {
+        "id": "amigo_nuevo",
+        "title": "Hacer un amigo nuevo"
+      },
+      "next": "p7"
+    },
+    "s6": {
+      "background": "art/bg_cielo.svg",
+      "text": {
+        "simple": "Las tres huellas doradas brillan. Sale la ptera bebé. Pipa le enseña a volar. ¡La ptera bebé vuela! El colgante está amarillo. Pipa está contenta.",
+        "cuento": "Las tres huellas doradas brillan juntas. ¡Crac! Sale la ptera bebé. Pipa abre sus alas y dice: “Mirá, así”. La ptera bebé mueve las alas, una vez, dos veces… ¡y vuela! El colgante está amarillo. Pipa está contenta.",
+        "aventura": "Las tres huellas doradas que encontraron en el camino brillan juntas. ¡Crac! El huevo se abre y sale la ptera bebé. Pipa también es un pájaro, así que abre sus alas y dice: “Mirá, así: arriba y abajo, despacio”. La ptera bebé mueve las alas una vez, dos veces, tres veces… ¡y vuela! Mamá Ptera vuela a su lado. El colgante está amarillo. Pipa está contenta."
+      },
+      "pendant": [
+        {
+          "color": "amarillo",
+          "at": 0.9
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.25,
+          "y": 0.6,
+          "scale": 0.42,
+          "state": "contento"
+        },
+        {
+          "id": "bubu",
+          "x": 0.1,
+          "y": 0.77,
+          "scale": 0.38
+        }
+      ],
+      "tappables": [
+        {
+          "id": "bebe",
+          "art": "art/ptera_bebe.svg",
+          "x": 0.55,
+          "y": 0.35,
+          "size": 220,
+          "anim": "float",
+          "sfx": "sfx/aleteo.ogg",
+          "word": "¡Vuela, ptera bebé!"
+        },
+        {
+          "id": "mama",
+          "art": "art/mama_ptera.svg",
+          "x": 0.78,
+          "y": 0.28,
+          "size": 300,
+          "anim": "float",
+          "sfx": "sfx/aleteo.ogg",
+          "word": "Mamá Ptera"
+        },
+        {
+          "id": "nube",
+          "art": "art/nube.svg",
+          "x": 0.4,
+          "y": 0.15,
+          "size": 220,
+          "anim": "float",
+          "sfx": "sfx/viento.ogg",
+          "word": "Una nube"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.6,
+          "y": 0.68,
+          "size": 200,
+          "anim": "hop",
+          "sfx": "sfx/guau.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "ending": {
+        "id": "secreto_volar",
+        "title": "La ptera bebé aprende a volar",
+        "secret": true
+      },
+      "next": "p7"
+    },
+    "p7": {
+      "background": "art/bg_plaza.svg",
+      "text": {
+        "simple": "Vuelven a la plaza. Pipa planta una semilla de luz en el árbol. El colgante está verde. Pipa está tranquila. Pipa dice: “Lo distinto no da miedo cuando lo conocés”.",
+        "cuento": "Pipa, Fido y Bubu vuelven a la plaza por la puerta verde. Pipa planta una semilla de luz en el Árbol de las Puertas. El colgante está verde. Pipa está tranquila. Pipa dice: “Lo distinto no da miedo cuando lo conocés”.",
+        "aventura": "Pipa, Fido y Bubu vuelven a la plaza por la puerta verde. La puerta se cierra despacio. Pipa saca una semilla de luz de su bolsillo y la planta en el Árbol de las Puertas. La semilla brilla entre las hojas. El colgante está verde. Pipa está tranquila. Pipa dice: “Lo distinto no da miedo cuando lo conocés”."
+      },
+      "pendant": [
+        {
+          "color": "verde",
+          "at": 0.6
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42
+        },
+        {
+          "id": "fido",
+          "x": 0.37,
+          "y": 0.77,
+          "scale": 0.36
+        },
+        {
+          "id": "bubu",
+          "x": 0.11,
+          "y": 0.77,
+          "scale": 0.4
+        }
+      ],
+      "tappables": [
+        {
+          "id": "semilla",
+          "art": "art/semilla.svg",
+          "x": 0.6,
+          "y": 0.3,
+          "size": 160,
+          "anim": "grow",
+          "sfx": "sfx/campanita.ogg",
+          "word": "Una semilla de luz"
+        },
+        {
+          "id": "puerta",
+          "art": "art/puerta_verde.svg",
+          "x": 0.78,
+          "y": 0.42,
+          "size": 240,
+          "anim": "wiggle",
+          "sfx": "sfx/puerta.ogg",
+          "word": "La puerta verde"
+        },
+        {
+          "id": "arbol",
+          "art": "art/arbol_plaza.svg",
+          "x": 0.5,
+          "y": 0.42,
+          "size": 260,
+          "anim": "wiggle",
+          "sfx": "sfx/hojas.ogg",
+          "word": "El Árbol de las Puertas"
+        }
+      ],
+      "closing": true
+    }
+  }
+}

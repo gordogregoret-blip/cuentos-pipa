@@ -1,6 +1,6 @@
 """Motores de voz. Cada uno escribe un WAV y devuelve tiempos por palabra o None.
 
-- kokoro: Kokoro-82M (Apache-2.0), voz española `ef_dora`. Necesita `pip install kokoro soundfile`
+- kokoro: Kokoro-82M (Apache-2.0), voz `ef_dora` con fonemas de español latinoamericano (es-419). Necesita `pip install kokoro soundfile`
   y `espeak-ng` instalado en el sistema.
 - piper: Piper (MIT) con voces es_MX (`es_MX-claude-high`, `es_MX-ald-medium`).
   Necesita `pip install piper-tts` y el modelo .onnx (+ .onnx.json).
@@ -52,7 +52,10 @@ class KokoroEngine(Engine):
 
     def __init__(self, voice: str = "ef_dora", speed: float = 1.0):
         from kokoro import KPipeline  # import tardío
+        from misaki import espeak
         self.pipe = KPipeline(lang_code="e", repo_id="hexgrad/Kokoro-82M")
+        # Español latinoamericano (seseo): sin esto espeak usa el castellano de España (θ).
+        self.pipe.g2p = espeak.EspeakG2P(language="es-419")
         self.voice = voice
         self.speed = speed
 

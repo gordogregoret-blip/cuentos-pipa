@@ -5,7 +5,7 @@ Para cada página y nivel escribe vo/<página>_<nivel>.ogg y su vo/<página>_<ni
 tiempos por palabra (karaoke). También las palabras de los tocables, las opciones de las
 decisiones, el título y el mensaje. Ver docs/story-schema.md.
 
-Audio final: ogg Vorbis mono 64 kbps, normalizado a -16 LUFS (ffmpeg loudnorm).
+Audio final: ogg Vorbis mono 64 kbps, normalizado a -16 LUFS (tools/audio_norm.py).
 
 Ejemplos:
   python3 tools/tts/tts.py --story stories/dino --engine kokoro
@@ -23,11 +23,12 @@ import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 
-import engines
-import syllables
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import audio_norm  # noqa: E402
+import engines  # noqa: E402
+import syllables  # noqa: E402
 
 LEVELS = ("simple", "cuento", "aventura")
-LOUDNORM = "loudnorm=I=-16:TP=-1.5:LRA=11"
 
 
 @dataclass
@@ -59,11 +60,9 @@ def ui_jobs(phrases: dict[str, str]) -> list[Job]:
 
 def encode(wav: Path, ogg: Path, normalize: bool) -> float:
     ogg.parent.mkdir(parents=True, exist_ok=True)
-    af = [LOUDNORM] if normalize else []
-    cmd = ["ffmpeg", "-v", "error", "-y", "-i", str(wav)]
-    if af:
-        cmd += ["-af", ",".join(af)]
-    cmd += ["-ac", "1", "-ar", "24000", "-c:a", "libvorbis", "-b:a", "64k", str(ogg)]
+    if normalize:
+        return audio_norm.normalize(wav, ogg, "64k", 24000)
+    cmd = ["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-ac", "1", "-ar", "24000", "-c:a", "libvorbis", "-b:a", "64k", str(ogg)]
     subprocess.run(cmd, check=True)
     probe = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
                             str(ogg)], capture_output=True, text=True, check=True)

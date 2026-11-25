@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "id": "granja",
+  "title": "El gallo que despertaba al sol",
+  "cast": [
+    "pipa",
+    "coco",
+    "tati"
+  ],
+  "message": "Cada uno ayuda a su manera.",
+  "start": "p1",
+  "preview": true,
+  "door_color": "#FFD86B",
+  "pages": {
+    "p1": {
+      "background": "art/bg_granja_noche.svg",
+      "text": {
+        "simple": "Pipa, Coco y Tati abren la puerta amarilla. Hay una granja. Es de noche. El colgante está violeta. Pipa está sorprendida.",
+        "cuento": "Pipa, Coco y Tati abren la puerta amarilla. Del otro lado hay una granja. Todavía es de noche y todos los animales duermen. El colgante está violeta. Pipa está sorprendida.",
+        "aventura": "Pipa, Coco y Tati abren la puerta amarilla. Del otro lado hay una granja con un granero rojo y un molino. Todavía es de noche. Las vacas, las ovejas y las gallinas duermen. Coco habla muy bajito para no despertar a nadie. El colgante está violeta. Pipa está sorprendida."
+      },
+      "pendant": [
+        {
+          "color": "violeta",
+          "at": 0.8
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42
+        },
+        {
+          "id": "art/coco.svg",
+          "x": 0.38,
+          "y": 0.77,
+          "scale": 0.9
+        }
+      ],
+      "tappables": [
+        {
+          "id": "tati",
+          "art": "cast:tati",
+          "x": 0.1,
+          "y": 0.6,
+          "size": 240,
+          "anim": "hop",
+          "sfx": "sfx/miau.ogg",
+          "word": "Miau. Tati"
+        },
+        {
+          "id": "luna",
+          "art": "art/luna.svg",
+          "x": 0.7,
+          "y": 0.18,
+          "size": 180,
+          "anim": "float",
+          "sfx": "sfx/campanita.ogg",
+          "word": "La luna"
+        },
+        {
+          "id": "granero",
+          "art": "art/granero.svg",
+          "x": 0.72,
+          "y": 0.5,
+          "size": 300,
+          "anim": "wiggle",
+          "sfx": "sfx/puerta.ogg",
+          "word": "El granero"
+        }
+      ],
+      "next": "p2"
+    },
+    "p2": {
+      "background": "art/bg_granja_noche.svg",
+      "text": {
+        "simple": "El gallo Kiko está triste. Kiko no puede cantar. El sol no sale. El colgante está azul. Pipa está triste.",
+        "cuento": "En el techo está el gallo Kiko. Kiko está triste porque no le sale la voz. Si Kiko no canta, los animales no se despiertan. El colgante está azul. Pipa está triste.",
+        "aventura": "Arriba del techo del granero está el gallo Kiko. Todas las mañanas Kiko canta y los animales se despiertan para recibir al sol. Pero hoy Kiko abre el pico y no le sale la voz. Kiko está triste. Tati pregunta: “¿Qué te pasa, Kiko?”. El colgante está azul. Pipa está triste."
+      },
+      "pendant": [
+        {
+          "color": "azul",
+          "at": 0.85
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.24,
+          "y": 0.77,
+          "scale": 0.42,
+          "state": "triste"
+        },
+        {
+          "id": "art/coco.svg",
+          "x": 0.38,
+          "y": 0.77,
+          "scale": 0.9
+        }
+      ],
+      "tappables": [
+        {
+          "id": "kiko",
+          "art": "art/kiko.svg",
+          "x": 0.68,
+          "y": 0.3,
+          "size": 240,
+          "anim": "wiggle",
+          "sfx": "sfx/pio.ogg",
+          "word": "El gallo Kiko"
+        },
+        {
+          "id": "tati",
+          "art": "cast:tati",
+          "x": 0.1,
+          "y": 0.6,
+          "size": 240,
+          "anim": "hop",
+          "sfx": "sfx/miau.ogg",
+          "word": "Tati pregunta"
+        },
+        {
+          "id": "molino",
+          "art": "art/molino.svg",
+          "x": 0.86,
+          "y": 0.48,
+          "size": 260,
+          "anim": "spin",
+          "sfx": "sfx/viento.ogg",
+          "word": "El molino"
+        }
+      ],
+      "next": null
+    }
+  }
+}

@@ -1,2 +1,5 @@
 jsonschema>=4.20
 pytest>=8
+numpy>=1.26
+scipy>=1.11
+fonttools>=4.40
