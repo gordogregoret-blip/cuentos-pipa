@@ -1,0 +1,14 @@
+title: Cuentos de Pipa
+description: Cuentos para elegir tu camino, con voz, calma y emociones.
+theme: jekyll-theme-minimal
+lang: es
+exclude:
+  - superpowers
+  - art
+  - trees
+  - story-schema.md
+  - release.md
+  - play-data-safety.md
+  - store-listing.md
+  - credits.md
+  - personajes.md
