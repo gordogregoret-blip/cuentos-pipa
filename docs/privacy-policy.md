@@ -52,7 +52,7 @@ Si la política cambia, se publica la nueva versión en esta misma dirección co
 ## Contacto
 
 <a id="contacto"></a>
-Para cualquier consulta sobre privacidad: **[COMPLETAR: correo de contacto del desarrollador]**.
+Para cualquier consulta sobre privacidad, escribinos en https://github.com/gordogregoret-blip/cuentos-pipa/issues o al correo de contacto que figura en la ficha de la app en Google Play.
 
 ---
 
@@ -104,4 +104,4 @@ If this policy changes, the new version will be published at this same address w
 
 ## Contact
 
-For any privacy question: **[FILL IN: developer contact email]**.
+For any privacy question, write to us at https://github.com/gordogregoret-blip/cuentos-pipa/issues or at the contact email shown on the app's Google Play listing.

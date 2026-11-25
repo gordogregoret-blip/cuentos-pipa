@@ -4,4 +4,4 @@ extends RefCounted
 
 const PRIVACY := "https://gordogregoret-blip.github.io/cuentos-pipa/privacy-policy"
 const MORE_STORIES := "https://gordogregoret-blip.github.io/cuentos-pipa/"
-const CONTACT := "https://gordogregoret-blip.github.io/cuentos-pipa/privacy-policy#contacto"
+const CONTACT := "https://github.com/gordogregoret-blip/cuentos-pipa/issues"
