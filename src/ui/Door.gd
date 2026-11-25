@@ -40,9 +40,8 @@ func setup(entry: Dictionary) -> void:
 		sign_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		sign.add_child(sign_label)
 		add_child(sign)
-		sign.position = Vector2(-30, 70)
-		sign.custom_minimum_size = Vector2(SIZE.x + 60, 0)
-		sign.rotation = -0.06
+		sign.position = Vector2(-25, 80)
+		sign.custom_minimum_size = Vector2(SIZE.x + 50, 0)
 	_stars = HBoxContainer.new()
 	_stars.alignment = BoxContainer.ALIGNMENT_CENTER
 	_stars.position = Vector2(-20, SIZE.y + 6)

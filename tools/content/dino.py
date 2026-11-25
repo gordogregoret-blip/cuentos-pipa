@@ -37,7 +37,7 @@ def huella(flag, x, y):
     return tap("huella_dorada", "art/huella_dorada.svg", x, y, 120, "grow", "campanita", "¡Una huella dorada!", flag)
 
 
-EQUIPO = [ch("pipa", 0.24, 0.77), ch("fido", 0.37, 0.77, 0.36), ch("bubu", 0.11, 0.77, 0.4)]
+EQUIPO = [ch("pipa", 0.24, 0.66), ch("fido", 0.37, 0.66, 0.36), ch("bubu", 0.11, 0.66, 0.4)]
 
 pages = {}
 
@@ -54,7 +54,7 @@ pages["p1"] = {
         "grande y redondo rueda por el pasto y se detiene a los pies de Pipa. El huevo brilla con una "
         "luz tibia. El colgante está violeta. Pipa está sorprendida."),
     "pendant": [{"color": "violeta", "at": 0.72}],
-    "characters": [ch("pipa", 0.3, 0.77, 0.45, "sorpresa"), ch("bubu", 0.13, 0.77, 0.42)],
+    "characters": [ch("pipa", 0.3, 0.66, 0.45, "sorpresa"), ch("bubu", 0.13, 0.66, 0.42)],
     "tappables": [
         tap("huevo", "art/huevo.svg", 0.5, 0.6, 200, "grow", "brillo", "¡Brilla! El huevo"),
         tap("puerta", "art/puerta_verde.svg", 0.72, 0.4, 260, "wiggle", "puerta", "La puerta verde"),
@@ -83,7 +83,7 @@ pages["p2"] = {
         tap("huellas", "art/huellas.svg", 0.55, 0.62, 220, "grow", "paso", "Huellas de dinosaurio"),
         tap("helecho", "art/helecho.svg", 0.78, 0.38, 240, "wiggle", "hojas", "Un helecho gigante"),
         tap("huevo", "art/huevo.svg", 0.42, 0.42, 150, "grow", "brillo", "El huevo brilla"),
-        tap("nariz", "cast:fido", 0.66, 0.3, 180, "hop", "olfato", "Fido huele"),
+        tap("nariz", "cast:fido", 0.66, 0.3, 280, "hop", "olfato", "Fido huele"),
     ],
     "decision": {"options": [
         {"text": "Por el río de las burbujas", "image": "art/op_rio.svg", "to": "a3"},
@@ -105,12 +105,12 @@ pages["a3"] = {
         "mi lomo. Yo sé cruzar”. Pipa, Fido y Bubu suben con cuidado y cruzan el río sobre Tina. "
         "El colgante está amarillo. Pipa está contenta."),
     "pendant": [{"color": "naranja", "at": 0.25}, {"color": "amarillo", "at": 0.9}],
-    "characters": [ch("pipa", 0.22, 0.75, 0.4), ch("bubu", 0.09, 0.76, 0.38)],
+    "characters": [ch("pipa", 0.22, 0.66, 0.4), ch("bubu", 0.09, 0.66, 0.38)],
     "tappables": [
         tap("tina", "art/tina.svg", 0.55, 0.55, 360, "hop", "paso", "¡Hola! Soy Tina"),
         tap("burbuja", "art/burbuja.svg", 0.78, 0.3, 140, "float", "burbuja", "¡Plop! Una burbuja"),
         tap("pez", "art/pez.svg", 0.84, 0.62, 170, "wiggle", "agua", "Un pez naranja"),
-        tap("fido", "cast:fido", 0.36, 0.45, 180, "hop", "guau", "¡Guau! Fido"),
+        tap("fido", "cast:fido", 0.36, 0.45, 280, "hop", "guau", "¡Guau! Fido"),
         huella("huella_2", 0.66, 0.18),
     ],
     "next": "a4",
@@ -132,7 +132,7 @@ pages["a4"] = {
     "characters": EQUIPO,
     "tappables": [
         tap("cascada", "art/cascada.svg", 0.58, 0.35, 260, "float", "agua", "La cascada"),
-        tap("piedra", "art/piedra.svg", 0.46, 0.66, 160, "bounce", "paso", "Una piedra plana"),
+        tap("piedra", "art/piedra.svg", 0.46, 0.6, 160, "bounce", "paso", "Una piedra plana"),
         tap("brachi", "art/brachi.svg", 0.82, 0.42, 340, "float", "hojas", "Brachi come hojas"),
         tap("arcoiris", "art/arcoiris.svg", 0.42, 0.2, 200, "grow", "campanita", "Un arcoíris"),
     ],
@@ -158,7 +158,7 @@ pages["b3"] = {
         "“Tranqui… yo también soy grandote”. Rex sonríe un poco. El colgante está verde. "
         "Pipa está tranquila."),
     "pendant": [{"color": "naranja", "at": 0.38}, {"color": "verde", "at": 0.92}],
-    "characters": [ch("pipa", 0.2, 0.77, 0.4), ch("fido", 0.32, 0.77, 0.34)],
+    "characters": [ch("pipa", 0.2, 0.66, 0.4), ch("fido", 0.32, 0.66, 0.34)],
     "tappables": [
         tap("rex", "art/rex.svg", 0.7, 0.45, 420, "wiggle", "rugido_suave", "Rex es tímido"),
         tap("bubu", "cast:bubu", 0.47, 0.55, 260, "hop", "abrazo", "Bubu da abrazos"),
@@ -213,7 +213,7 @@ pages["p5_pasos"] = p5("art/bg_cascada.svg", T(
     [ch("pipa", 0.3, 0.6, 0.38), ch("bubu", 0.16, 0.74, 0.38)],
     [tap("piedra", "art/piedra.svg", 0.45, 0.7, 160, "bounce", "paso", "Un paso"),
      tap("huevo", "art/huevo.svg", 0.58, 0.45, 150, "grow", "brillo", "El huevo brilla"),
-     tap("fido", "cast:fido", 0.72, 0.62, 200, "hop", "guau", "¡Guau! Fido")])
+     tap("fido", "cast:fido", 0.72, 0.62, 280, "hop", "guau", "¡Guau! Fido")])
 pages["p5_pasos"]["next"] = "p6_pasos"
 pages["p5_pasos"]["secret_next"] = "s6"
 
@@ -227,7 +227,7 @@ pages["p5_brachi"] = p5("art/bg_cascada.svg", T(
     "al nido de arriba. ¿Nos ayudás a subir, por favor?”. Brachi dice que sí. Baja su cuello largo "
     "hasta el piso y espera. Pipa, Fido y Bubu suben despacio por el cuello y Brachi los levanta "
     "hasta arriba de la cascada. El colgante está amarillo. Pipa está contenta."),
-    [ch("pipa", 0.22, 0.75, 0.4), ch("fido", 0.33, 0.76, 0.34)],
+    [ch("pipa", 0.22, 0.66, 0.4), ch("fido", 0.33, 0.66, 0.34)],
     [tap("brachi", "art/brachi.svg", 0.62, 0.42, 380, "float", "hojas", "Gracias, Brachi"),
      tap("huevo", "art/huevo.svg", 0.42, 0.5, 150, "grow", "brillo", "El huevo brilla"),
      tap("bubu", "cast:bubu", 0.1, 0.62, 200, "hop", "abrazo", "Bubu sube")])
@@ -244,10 +244,10 @@ pages["p5_rex"] = p5("art/bg_montana.svg", T(
     "otros dinosaurios ven a Rex, se esconden detrás de las piedras. Rex se agacha, baja la cabeza "
     "y saluda despacio. Pipa explica: “Rex es nuestro amigo. Nos mostró el camino”. Los "
     "dinosaurios salen de a poco. El colgante está amarillo. Pipa está contenta."),
-    [ch("pipa", 0.22, 0.76, 0.4), ch("bubu", 0.09, 0.76, 0.38)],
+    [ch("pipa", 0.22, 0.66, 0.4), ch("bubu", 0.09, 0.66, 0.38)],
     [tap("rex", "art/rex.svg", 0.62, 0.45, 400, "wiggle", "rugido_suave", "Rex saluda"),
-     tap("piedra", "art/piedra.svg", 0.82, 0.66, 150, "bounce", "paso", "Una piedra"),
-     tap("fido", "cast:fido", 0.36, 0.62, 200, "hop", "guau", "¡Guau! Fido")])
+     tap("piedra", "art/piedra.svg", 0.82, 0.6, 150, "bounce", "paso", "Una piedra"),
+     tap("fido", "cast:fido", 0.36, 0.62, 280, "hop", "guau", "¡Guau! Fido")])
 pages["p5_rex"]["next"] = "p6_rex"
 pages["p5_rex"]["secret_next"] = "s6"
 
@@ -260,10 +260,10 @@ pages["p5_amigo"] = p5("art/bg_montana.svg", T(
     "“Los espero acá”. Fido huele el viento, sigue el olor y encuentra el nido de mamá Ptera "
     "entre unas rocas. Pipa piensa que después va a presentar a Rex. El colgante está amarillo. "
     "Pipa está contenta."),
-    [ch("pipa", 0.24, 0.76, 0.4), ch("bubu", 0.11, 0.76, 0.38)],
+    [ch("pipa", 0.24, 0.66, 0.4), ch("bubu", 0.11, 0.66, 0.38)],
     [tap("nido", "art/nido.svg", 0.62, 0.5, 260, "grow", "hojas", "El nido"),
-     tap("fido", "cast:fido", 0.4, 0.6, 200, "hop", "olfato", "Fido huele"),
-     tap("rex_lejos", "art/rex.svg", 0.84, 0.66, 180, "wiggle", "rugido_suave", "Rex espera")])
+     tap("fido", "cast:fido", 0.4, 0.6, 280, "hop", "olfato", "Fido huele"),
+     tap("rex_lejos", "art/rex.svg", 0.84, 0.6, 180, "wiggle", "rugido_suave", "Rex espera")])
 pages["p5_amigo"]["next"] = "p6_amigo"
 pages["p5_amigo"]["secret_next"] = "s6"
 
@@ -276,7 +276,7 @@ def p6(ending_id, title, bg, text, characters, taps):
 TAPS_NIDO = [
     tap("mama", "art/mama_ptera.svg", 0.62, 0.38, 360, "float", "aleteo", "Mamá Ptera"),
     tap("bebe", "art/ptera_bebe.svg", 0.5, 0.6, 170, "hop", "pio", "¡Pío! La ptera bebé"),
-    tap("nido", "art/nido.svg", 0.78, 0.66, 200, "grow", "hojas", "El nido"),
+    tap("nido", "art/nido.svg", 0.78, 0.6, 200, "grow", "hojas", "El nido"),
 ]
 
 pages["p6_pasos"] = p6("paso_a_paso", "Paso a paso se llega lejos", "art/bg_nido.svg", T(
@@ -312,7 +312,7 @@ pages["p6_rex"] = p6("rex_gigante_bueno", "Rex, el gigante bueno", "art/bg_nido.
     "sorprende al ver a un tiranosaurio tan grande. Rex le da el huevo despacio. Mamá Ptera dice: "
     "“Gracias, Rex”. ¡Crac! El huevo se abre y sale una ptera bebé. Los otros dinosaurios aplauden. "
     "Ahora todos saben que Rex es un gigante bueno."),
-    [ch("pipa", 0.22, 0.76, 0.4), ch("fido", 0.34, 0.77, 0.34)],
+    [ch("pipa", 0.22, 0.66, 0.4), ch("fido", 0.34, 0.66, 0.34)],
     TAPS_NIDO[:2] + [tap("rex", "art/rex.svg", 0.85, 0.48, 360, "hop", "rugido_suave", "Rex, el gigante bueno")])
 
 pages["p6_amigo"] = p6("amigo_nuevo", "Hacer un amigo nuevo", "art/bg_nido.svg", T(
@@ -340,12 +340,12 @@ pages["s6"] = {
         "tres veces… ¡y vuela! Mamá Ptera vuela a su lado. El colgante está amarillo. "
         "Pipa está contenta."),
     "pendant": [{"color": "amarillo", "at": 0.9}],
-    "characters": [ch("pipa", 0.25, 0.6, 0.42, "contento"), ch("bubu", 0.1, 0.77, 0.38)],
+    "characters": [ch("pipa", 0.25, 0.6, 0.42, "contento"), ch("bubu", 0.1, 0.66, 0.38)],
     "tappables": [
         tap("bebe", "art/ptera_bebe.svg", 0.55, 0.35, 220, "float", "aleteo", "¡Vuela, ptera bebé!"),
         tap("mama", "art/mama_ptera.svg", 0.78, 0.28, 300, "float", "aleteo", "Mamá Ptera"),
         tap("nube", "art/nube.svg", 0.4, 0.15, 220, "float", "viento", "Una nube"),
-        tap("fido", "cast:fido", 0.6, 0.68, 200, "hop", "guau", "¡Guau! Fido"),
+        tap("fido", "cast:fido", 0.6, 0.6, 280, "hop", "guau", "¡Guau! Fido"),
     ],
     "ending": {"id": "secreto_volar", "title": "La ptera bebé aprende a volar", "secret": True},
     "next": "p7",

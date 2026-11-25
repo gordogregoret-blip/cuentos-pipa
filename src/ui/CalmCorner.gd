@@ -22,6 +22,8 @@ func _init() -> void:
 	title.set_anchors_preset(Control.PRESET_CENTER_TOP)
 	title.grow_horizontal = Control.GROW_DIRECTION_BOTH
 	title.offset_top = 60
+	title.offset_left = -800
+	title.offset_right = 800
 	add_child(title)
 	lumi = TextureRect.new()
 	lumi.texture = load("res://art/ui/lumi.svg")
@@ -37,6 +39,8 @@ func _init() -> void:
 	guide_label.grow_horizontal = Control.GROW_DIRECTION_BOTH
 	guide_label.offset_top = -280
 	guide_label.offset_bottom = -200
+	guide_label.offset_left = -800
+	guide_label.offset_right = 800
 	add_child(guide_label)
 	back_button = Overlay.text_button("BTN_BACK_TO_STORY", "atras", 460)
 	back_button.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)

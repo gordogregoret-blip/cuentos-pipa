@@ -47,8 +47,8 @@ func _ready() -> void:
 	text_panel.anchor_right = 0.5
 	text_panel.anchor_top = 1.0
 	text_panel.anchor_bottom = 1.0
-	text_panel.offset_left = -720
-	text_panel.offset_right = 720
+	text_panel.offset_left = -790
+	text_panel.offset_right = 790
 	text_panel.offset_top = -28
 	text_panel.offset_bottom = -28
 	text_panel.grow_vertical = Control.GROW_DIRECTION_BEGIN
@@ -181,6 +181,7 @@ func _show_page(direction: StringName) -> void:
 	hint.touch()
 	decision_cards.close()
 	closing.close()
+	text_panel.visible = Store.setting("subtitles")
 	_set_text(-1)
 	_update_controls()
 	if state.kind() == &"closing":
@@ -253,9 +254,11 @@ func _on_narration_finished() -> void:
 		&"decision":
 			decision_cards.show_options(data, state.current)
 		&"closing":
+			text_panel.visible = false
 			closing.show_closing(data)
 		&"end_preview":
 			Store.clear_resume(data.id)
+			text_panel.visible = false
 			closing.show_preview()
 	narration_finished.emit()
 

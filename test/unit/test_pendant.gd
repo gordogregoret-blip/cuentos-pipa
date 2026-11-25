@@ -41,3 +41,14 @@ func test_due_changes_by_fraction() -> void:
 	assert_eq(Pendant.due(entries, 0.1), "")
 	assert_eq(Pendant.due(entries, 0.3), "naranja")
 	assert_eq(Pendant.due(entries, 0.9), "verde")
+
+
+func test_pendant_lives_on_pipa_without_z_index() -> void:
+	var data := StoryData.load_from("res://test/fixtures/stories/mini")
+	var pv := PageView.new()
+	pv.build(data, "p1")
+	add_child_autofree(pv)
+	assert_not_null(pv.pendant)
+	assert_eq(pv.pendant.get_parent(), pv.pipa, "colgado de Pipa")
+	assert_eq(pv.pendant.z_index, 0, "no se dibuja encima de las capas")
+	assert_eq(pv.pendant.get_index(), pv.pipa.get_child_count() - 1, "encima del cuerpo de Pipa")

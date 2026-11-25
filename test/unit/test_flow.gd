@@ -127,3 +127,9 @@ func test_back_closes_closing_overlay_first() -> void:
 	assert_true(p.handle_back())
 	await wait_until(func() -> bool: return not p.is_transitioning(), 2.0)
 	assert_eq(p.state.current, "p1", "con las tarjetas abiertas, Atrás vuelve una página")
+
+
+func test_text_panel_hidden_behind_closing() -> void:
+	p.open(MINI, {"page": "p7", "history": ["p1", "p2", "a5", "a6"], "flags": []})
+	await _read_page()
+	assert_false(p.text_panel.visible)

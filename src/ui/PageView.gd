@@ -52,7 +52,8 @@ func _add_character(ch: Dictionary) -> void:
 			pendant = PendantView.new()
 			pendant.position = Vector2(0, -150)
 			pendant.scale = Vector2(1.3, 1.3)
-			rig.add_child(pendant)
+			# El rig arma sus piezas en _ready: el colgante va después, encima del cuerpo.
+			rig.ready.connect(rig.add_child.bind(pendant), CONNECT_ONE_SHOT)
 	else:
 		var s := Sprite2D.new()
 		s.texture = _tex(id)

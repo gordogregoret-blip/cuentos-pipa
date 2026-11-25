@@ -24,6 +24,10 @@ func _ready() -> void:
 	for key in ["calm", "easy_font"]:
 		if _args.has(key):
 			Store.data["settings"][key] = _args[key] == "true"
+	# Si algo falla y _run no llega a quit(), igual se cierra.
+	get_tree().create_timer(float(_args.get("wait", "1.2")) + 20.0).timeout.connect(func() -> void:
+		push_error("captura: tiempo agotado")
+		get_tree().quit(1))
 	_run.call_deferred()
 
 

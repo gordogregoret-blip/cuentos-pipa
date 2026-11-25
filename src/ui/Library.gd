@@ -4,8 +4,8 @@ extends Control
 
 signal story_chosen(id: String)
 
-const DOOR_SLOTS := [Vector2(170, 300), Vector2(420, 300), Vector2(170, 640), Vector2(420, 640),
-	Vector2(1300, 300), Vector2(1550, 300), Vector2(1300, 640), Vector2(1550, 640)]
+const DOOR_SLOTS := [Vector2(100, 300), Vector2(390, 300), Vector2(100, 640), Vector2(390, 640),
+	Vector2(1330, 300), Vector2(1620, 300), Vector2(1330, 640), Vector2(1620, 640)]
 
 var index: StoryIndex
 var doors: Array[Door] = []

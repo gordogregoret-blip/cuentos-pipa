@@ -39,8 +39,8 @@ STORY = {
                 "Coco habla muy bajito para no despertar a nadie. El colgante está violeta. "
                 "Pipa está sorprendida."),
             "pendant": [{"color": "violeta", "at": 0.8}],
-            "characters": [{"id": "pipa", "x": 0.24, "y": 0.77, "scale": 0.42},
-                           {"id": "art/coco.svg", "x": 0.38, "y": 0.77, "scale": 0.9}],
+            "characters": [{"id": "pipa", "x": 0.24, "y": 0.66, "scale": 0.42},
+                           {"id": "art/coco.svg", "x": 0.38, "y": 0.66, "scale": 0.9}],
             "tappables": [
                 tap("tati", "cast:tati", 0.1, 0.6, 240, "hop", "miau", "Miau. Tati"),
                 tap("luna", "art/luna.svg", 0.7, 0.18, 180, "float", "campanita", "La luna"),
@@ -60,8 +60,8 @@ STORY = {
                 "la voz. Kiko está triste. Tati pregunta: “¿Qué te pasa, Kiko?”. El colgante está azul. "
                 "Pipa está triste."),
             "pendant": [{"color": "azul", "at": 0.85}],
-            "characters": [{"id": "pipa", "x": 0.24, "y": 0.77, "scale": 0.42, "state": "triste"},
-                           {"id": "art/coco.svg", "x": 0.38, "y": 0.77, "scale": 0.9}],
+            "characters": [{"id": "pipa", "x": 0.24, "y": 0.66, "scale": 0.42, "state": "triste"},
+                           {"id": "art/coco.svg", "x": 0.38, "y": 0.66, "scale": 0.9}],
             "tappables": [
                 tap("kiko", "art/kiko.svg", 0.68, 0.3, 240, "wiggle", "pio", "El gallo Kiko"),
                 tap("tati", "cast:tati", 0.1, 0.6, 240, "hop", "miau", "Tati pregunta"),

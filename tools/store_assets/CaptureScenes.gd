@@ -29,18 +29,8 @@ static func make(kind: String, args: Dictionary) -> Node:
 				for i in int(args["seeds"]):
 					Store.data["seeds"].append("s%d" % i)
 			if args.has("endings"):
-				Store.data["endings"]["dino"] = String(args["endings"]).split(",")
-			m.ready.connect(func() -> void:
-				match kind:
-					"calm":
-						m.open_story("dino", {"page": "b3", "history": ["p1", "p2"], "flags": []})
-						m.open_calm()
-					"gate":
-						m.open_adult()
-					"adult":
-						var panel := AdultPanel.new()
-						panel.index = m.index
-						m.open_overlay(panel))
+				Store.data["endings"]["dino"] = Array(String(args["endings"]).split(","))
+			m.ready.connect(_after_main.bind(m, kind))
 			return m
 		"feature":
 			return _feature()
@@ -84,6 +74,18 @@ static func _feature() -> Control:
 	title.position = Vector2(90, 70)
 	root.add_child(title)
 	return root
+
+
+static func _after_main(m: Main, kind: String) -> void:
+	if kind == "calm":
+		m.open_story("dino", {"page": "b3", "history": ["p1", "p2"], "flags": []})
+		m.open_calm()
+	elif kind == "gate":
+		m.open_adult()
+	elif kind == "adult":
+		var panel := AdultPanel.new()
+		panel.index = m.index
+		m.open_overlay(panel)
 
 
 static func _history(args: Dictionary) -> Array:

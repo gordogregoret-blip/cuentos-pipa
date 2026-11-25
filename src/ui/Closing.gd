@@ -55,10 +55,10 @@ func show_closing(data: StoryData) -> void:
 	for c in ORDER:
 		var b := Button.new()
 		b.name = c
-		b.custom_minimum_size = Vector2(170, 130)
+		b.custom_minimum_size = Vector2(190, 130)
 		b.text = tr("EMO_" + c)
 		b.focus_mode = Control.FOCUS_NONE
-		b.add_theme_font_size_override("font_size", 34)
+		b.add_theme_font_size_override("font_size", 36)
 		var sb := StyleBoxFlat.new()
 		sb.bg_color = Pendant.COLORS[c]
 		sb.set_corner_radius_all(65)
