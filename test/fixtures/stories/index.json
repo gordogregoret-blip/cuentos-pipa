@@ -1,0 +1,10 @@
+{"stories": [
+  {"id": "mini", "title": "Cuento mínimo", "door_color": "#7FC28E", "locked": false},
+  {"id": "preview", "title": "Cuento de prueba", "door_color": "#F2836B", "locked": false},
+  {"id": "l1", "title": "Bloqueado uno", "door_color": "#5BB5A8", "locked": true},
+  {"id": "l2", "title": "Bloqueado dos", "door_color": "#B38FD9", "locked": true},
+  {"id": "l3", "title": "Bloqueado tres", "door_color": "#6FA8DC", "locked": true},
+  {"id": "l4", "title": "Bloqueado cuatro", "door_color": "#F5A04A", "locked": true},
+  {"id": "l5", "title": "Bloqueado cinco", "door_color": "#E8806E", "locked": true},
+  {"id": "l6", "title": "Bloqueado seis", "door_color": "#FFD86B", "locked": true}
+]}
