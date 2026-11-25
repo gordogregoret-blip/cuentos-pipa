@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-182 -300 364 408" width="364" height="408">
+  <!-- Pivote: cuello. Ojos y pico son piezas aparte (ver manifest para sus posiciones). -->
+  <circle cx="0" cy="-70" r="170" fill="#FFF1DA"/>
+  <!-- Capucha marrón con pico de viuda -->
+  <path d="M -169 -85 A 170 170 0 0 1 169 -85 Q 85 -143 0 -110 Q -85 -143 -169 -85 Z" fill="#5A4136"/>
+  <!-- Mejillas -->
+  <ellipse cx="-105" cy="-8" rx="27" ry="17" fill="#F9B9A6"/>
+  <ellipse cx="105" cy="-8" rx="27" ry="17" fill="#F9B9A6"/>
+  <!-- Copete -->
+  <path d="M -4 -236 C -34 -282 -4 -298 6 -240 Z" fill="#5A4136" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M 6 -236 C 22 -278 48 -270 16 -234 Z" fill="#5A4136" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="0" cy="-70" r="170" fill="none" stroke="#4A2E22" stroke-width="8"/>
+</svg>

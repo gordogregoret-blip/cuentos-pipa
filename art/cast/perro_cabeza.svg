@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-182 -266 364 312" width="364" height="312">
+  <!-- Pivote: cuello. Las orejas caídas van ADELANTE de la cabeza (ver CharacterDefs). -->
+  <ellipse cx="0" cy="-110" rx="175" ry="150" fill="#F2D0A4"/>
+  <ellipse cx="66" cy="-138" rx="46" ry="42" fill="#E0B07E"/>
+  <ellipse cx="0" cy="-58" rx="88" ry="58" fill="#FFF4E6"/>
+  <ellipse cx="-118" cy="-68" rx="28" ry="18" fill="#F9B9A6"/>
+  <ellipse cx="118" cy="-68" rx="28" ry="18" fill="#F9B9A6"/>
+  <path d="M 0 -78 L 0 -62" stroke="#4A2E22" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="0" cy="-92" rx="26" ry="18" fill="#4A2E22"/>
+  <ellipse cx="-8" cy="-97" rx="8" ry="5" fill="#8A6A5A"/>
+  <ellipse cx="0" cy="-110" rx="175" ry="150" fill="none" stroke="#4A2E22" stroke-width="8"/>
+</svg>

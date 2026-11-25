@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-34 -26 68 188" width="68" height="188">
+  <!-- Brazo. Pivote: hombro; cuelga hacia +y. -->
+  <rect x="-28" y="-20" width="56" height="175" rx="28" fill="#F2D0A4" stroke="#4A2E22" stroke-width="8"/>
+  <circle cx="0" cy="124" r="18" fill="#FFF4E6"/>
+</svg>

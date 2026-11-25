@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-82 -20 120 222" width="120" height="222">
+  <!-- Ala izquierda. Pivote: hombro. La derecha es este mismo archivo con scale.x = -1. -->
+  <path d="M 0 -10 C -55 0 -75 90 -50 170 C -40 195 -10 190 5 160 C 25 110 30 30 0 -10 Z" fill="#C8693B" stroke="#4A2E22" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M -42 138 Q -30 158 -12 150" fill="none" stroke="#A9532C" stroke-width="6" stroke-linecap="round"/>
+</svg>

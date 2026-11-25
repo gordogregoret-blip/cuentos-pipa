@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-156 -352 312 368" width="312" height="368">
+  <!-- Pivote: base del cuerpo, al centro. -->
+  <ellipse cx="0" cy="-170" rx="150" ry="175" fill="#C99A6E"/>
+  <ellipse cx="0" cy="-140" rx="92" ry="112" fill="#F6E3C8"/>
+  <ellipse cx="0" cy="-170" rx="150" ry="175" fill="none" stroke="#4A2E22" stroke-width="8"/>
+  <!-- Moño -->
+  <path d="M 0 -262 L -62 -296 Q -72 -262 -62 -228 Z" fill="#FFD86B" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M 0 -262 L 62 -296 Q 72 -262 62 -228 Z" fill="#FFD86B" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="0" cy="-262" r="16" fill="#F2B93B" stroke="#4A2E22" stroke-width="6"/>
+</svg>

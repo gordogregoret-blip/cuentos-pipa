@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 -16 64 46" width="64" height="46">
+  <!-- Boca contenta abierta (clientes). Pivote: centro. -->
+  <path d="M -26 -8 Q 0 -4 26 -8 Q 22 22 0 24 Q -22 22 -26 -8 Z" fill="#7A3B2E" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M -12 14 Q 0 6 12 14 Q 8 22 0 22 Q -8 22 -12 14 Z" fill="#F28FA3"/>
+</svg>

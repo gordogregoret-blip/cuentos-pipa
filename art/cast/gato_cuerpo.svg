@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-156 -352 312 368" width="312" height="368">
+  <!-- Gato: cuerpo. Pivote: base del cuerpo, al centro. -->
+  <ellipse cx="0" cy="-170" rx="150" ry="175" fill="#F2A65A"/>
+  <ellipse cx="0" cy="-140" rx="92" ry="112" fill="#FFF1DC"/>
+  <path d="M -146 -200 Q -118 -196 -104 -178" fill="none" stroke="#D9803A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 146 -200 Q 118 -196 104 -178" fill="none" stroke="#D9803A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M -140 -120 Q -114 -118 -100 -102" fill="none" stroke="#D9803A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 140 -120 Q 114 -118 100 -102" fill="none" stroke="#D9803A" stroke-width="12" stroke-linecap="round"/>
+  <ellipse cx="0" cy="-170" rx="150" ry="175" fill="none" stroke="#4A2E22" stroke-width="8"/>
+  <!-- Collar con cascabel -->
+  <path d="M -96 -300 Q 0 -250 96 -300" fill="none" stroke="#5BB5A8" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="0" cy="-262" r="18" fill="#FFD86B" stroke="#4A2E22" stroke-width="6"/>
+  <path d="M -8 -258 L 8 -258" stroke="#4A2E22" stroke-width="4" stroke-linecap="round"/>
+</svg>

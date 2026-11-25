@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-182 -266 364 312" width="364" height="312">
+  <!-- Gato: cabeza. Pivote: cuello. Orejas, ojos y boca son piezas aparte. -->
+  <ellipse cx="0" cy="-110" rx="175" ry="150" fill="#F2A65A"/>
+  <path d="M -30 -252 Q -26 -222 -14 -206" fill="none" stroke="#D9803A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 0 -258 L 0 -214" fill="none" stroke="#D9803A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 30 -252 Q 26 -222 14 -206" fill="none" stroke="#D9803A" stroke-width="12" stroke-linecap="round"/>
+  <ellipse cx="0" cy="-52" rx="96" ry="62" fill="#FFF1DC"/>
+  <ellipse cx="-118" cy="-68" rx="28" ry="18" fill="#F9B9A6"/>
+  <ellipse cx="118" cy="-68" rx="28" ry="18" fill="#F9B9A6"/>
+  <path d="M -16 -96 L 16 -96 L 0 -78 Z" fill="#F28B8B" stroke="#4A2E22" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 0 -78 L 0 -64" stroke="#4A2E22" stroke-width="5" stroke-linecap="round"/>
+  <g stroke="#4A2E22" stroke-width="5" stroke-linecap="round">
+    <path d="M -60 -74 L -138 -88"/><path d="M -60 -62 L -140 -60"/>
+    <path d="M 60 -74 L 138 -88"/><path d="M 60 -62 L 140 -60"/>
+  </g>
+  <ellipse cx="0" cy="-110" rx="175" ry="150" fill="none" stroke="#4A2E22" stroke-width="8"/>
+</svg>

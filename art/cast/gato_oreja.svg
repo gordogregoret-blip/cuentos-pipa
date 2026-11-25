@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -150 112 168" width="112" height="168">
+  <!-- Oreja de gato, en punta. Pivote: base (va detrás de la cabeza). Un archivo para las dos. -->
+  <path d="M -48 6 L -6 -138 Q 0 -146 6 -138 L 48 6 Z" fill="#F2A65A" stroke="#4A2E22" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M -24 -4 L 0 -96 L 24 -4 Z" fill="#F9B9A6"/>
+</svg>

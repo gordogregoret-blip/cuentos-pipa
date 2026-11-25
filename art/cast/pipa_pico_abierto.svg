@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -32 92 84" width="92" height="84">
+  <!-- Pico sonriendo/hablando. Pivote: centro del pico (se intercambia con pipa_pico_cerrado). -->
+  <path d="M -32 0 Q 0 30 32 0 Q 20 42 0 46 Q -20 42 -32 0 Z" fill="#7A3B2E" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M -24 18 Q 0 26 24 18 Q 14 42 0 46 Q -14 42 -24 18 Z" fill="#F59B2F" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M -40 -12 Q 0 -26 40 -12 Q 20 14 0 16 Q -20 14 -40 -12 Z" fill="#F59B2F" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+</svg>

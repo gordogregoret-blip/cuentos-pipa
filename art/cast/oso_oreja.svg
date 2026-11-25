@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -86 112 112" width="112" height="112">
+  <!-- Oreja redonda. Pivote: base (va detrás de la cabeza). Un archivo para las dos. -->
+  <circle cx="0" cy="-30" r="48" fill="#C99A6E" stroke="#4A2E22" stroke-width="8"/>
+  <circle cx="0" cy="-30" r="25" fill="#E8B48F"/>
+</svg>

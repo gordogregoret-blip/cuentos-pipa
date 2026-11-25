@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -30 48 60" width="48" height="60">
+  <!-- Ojo compartido por TODOS los personajes. Pivote: centro del ojo. -->
+  <ellipse cx="0" cy="0" rx="19" ry="25" fill="#4A2E22"/>
+  <circle cx="6" cy="-9" r="7" fill="#FFFFFF"/>
+</svg>

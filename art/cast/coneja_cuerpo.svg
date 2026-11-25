@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-156 -352 312 368" width="312" height="368">
+  <!-- Pivote: base del cuerpo, al centro. -->
+  <ellipse cx="0" cy="-170" rx="150" ry="175" fill="#BDB2E3"/>
+  <ellipse cx="0" cy="-140" rx="92" ry="112" fill="#FFF4E6"/>
+  <ellipse cx="0" cy="-170" rx="150" ry="175" fill="none" stroke="#4A2E22" stroke-width="8"/>
+  <!-- Pañuelo -->
+  <path d="M -80 -290 Q 0 -275 80 -290 L 0 -196 Z" fill="#F2836B" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+</svg>

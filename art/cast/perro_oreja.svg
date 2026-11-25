@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-70 -14 112 196" width="112" height="196">
+  <!-- Oreja caída izquierda. Pivote: donde se une a la cabeza. La derecha: scale.x = -1. -->
+  <path d="M -30 0 C -62 40 -58 150 -14 172 C 22 180 34 120 26 44 C 22 10 4 -6 -30 0 Z" fill="#B9784C" stroke="#4A2E22" stroke-width="8" stroke-linejoin="round"/>
+</svg>

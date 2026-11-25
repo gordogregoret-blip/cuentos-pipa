@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-26 -22 52 44" width="52" height="44">
+  <!-- Boca compartida (clientes). Pivote: centro. -->
+  <ellipse cx="0" cy="0" rx="18" ry="15" fill="#7A3B2E" stroke="#4A2E22" stroke-width="6"/>
+  <ellipse cx="0" cy="7" rx="9" ry="5" fill="#F28FA3"/>
+</svg>

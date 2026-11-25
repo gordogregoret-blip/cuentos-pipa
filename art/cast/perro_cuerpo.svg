@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-156 -352 312 368" width="312" height="368">
+  <!-- Pivote: base del cuerpo, al centro. -->
+  <ellipse cx="0" cy="-170" rx="150" ry="175" fill="#F2D0A4"/>
+  <ellipse cx="0" cy="-140" rx="92" ry="112" fill="#FFF4E6"/>
+  <ellipse cx="0" cy="-170" rx="150" ry="175" fill="none" stroke="#4A2E22" stroke-width="8"/>
+  <!-- Collar con medalla -->
+  <path d="M -112 -282 Q 0 -246 112 -282 L 104 -252 Q 0 -216 -104 -252 Z" fill="#5BB5A8" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="0" cy="-212" r="20" fill="#FFD86B" stroke="#4A2E22" stroke-width="6"/>
+</svg>

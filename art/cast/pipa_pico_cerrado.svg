@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -32 92 84" width="92" height="84">
+  <!-- Pico cerrado. Mismo viewBox/pivote que pipa_pico_abierto. -->
+  <path d="M -40 -12 Q 0 -26 40 -12 Q 22 30 0 38 Q -22 30 -40 -12 Z" fill="#F59B2F" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M -30 2 Q 0 12 30 2" fill="none" stroke="#4A2E22" stroke-width="5" stroke-linecap="round"/>
+</svg>

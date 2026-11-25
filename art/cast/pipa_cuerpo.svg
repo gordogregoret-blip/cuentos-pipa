@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-200 -410 400 420" width="400" height="420">
+  <!-- Pivote: base del cuerpo, al centro (para estirar/aplastar). -->
+  <ellipse cx="0" cy="-200" rx="190" ry="200" fill="#FFF1DA"/>
+  <ellipse cx="0" cy="-170" rx="120" ry="135" fill="#FFF8EC"/>
+  <!-- Delantal del café -->
+  <path d="M -120 -250 Q 0 -265 120 -250 L 135 -60 Q 0 -30 -135 -60 Z" fill="#5BB5A8" stroke="#4A2E22" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="-45" y="-175" width="90" height="56" rx="14" fill="#4A9C90" stroke="#4A2E22" stroke-width="6"/>
+  <ellipse cx="0" cy="-200" rx="190" ry="200" fill="none" stroke="#4A2E22" stroke-width="8"/>
+</svg>

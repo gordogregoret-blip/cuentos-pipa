@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -248 112 266" width="112" height="266">
+  <!-- Oreja. Pivote: base (va detrás de la cabeza). Un solo archivo para las dos. -->
+  <path d="M -38 10 C -50 -100 -42 -230 0 -240 C 42 -230 50 -100 38 10 Z" fill="#BDB2E3" stroke="#4A2E22" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M -18 -10 C -24 -100 -20 -190 0 -200 C 20 -190 24 -100 18 -10 Z" fill="#F7B3C2"/>
+</svg>

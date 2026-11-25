@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-182 -266 364 312" width="364" height="312">
+  <!-- Pivote: cuello. Orejas, ojos y boca son piezas aparte. -->
+  <ellipse cx="0" cy="-110" rx="175" ry="150" fill="#C99A6E"/>
+  <ellipse cx="0" cy="-56" rx="92" ry="64" fill="#F6E3C8"/>
+  <ellipse cx="-118" cy="-68" rx="28" ry="18" fill="#F9B9A6"/>
+  <ellipse cx="118" cy="-68" rx="28" ry="18" fill="#F9B9A6"/>
+  <path d="M 0 -76 L 0 -62" stroke="#4A2E22" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="0" cy="-90" rx="25" ry="17" fill="#4A2E22"/>
+  <ellipse cx="-7" cy="-95" rx="8" ry="5" fill="#8A6A5A"/>
+  <ellipse cx="0" cy="-110" rx="175" ry="150" fill="none" stroke="#4A2E22" stroke-width="8"/>
+</svg>
