@@ -1,0 +1,408 @@
+{
+  "schema": 1,
+  "id": "mini",
+  "title": "Cuento mínimo",
+  "cast": [
+    "pipa",
+    "fido"
+  ],
+  "message": "Probar es divertido.",
+  "start": "p1",
+  "preview": false,
+  "secret": {
+    "requires": [
+      "huella_1",
+      "huella_2"
+    ],
+    "page": "s6"
+  },
+  "pages": {
+    "p1": {
+      "background": "art/fondo.svg",
+      "text": {
+        "simple": "Pipa está en la plaza.",
+        "cuento": "Pipa está en la plaza. Fido mira.",
+        "aventura": "Pipa está en la plaza. Fido mira todo con atención."
+      },
+      "pendant": [
+        {
+          "color": "amarillo",
+          "at": 0.5
+        }
+      ],
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.3,
+          "y": 0.9,
+          "scale": 0.5
+        }
+      ],
+      "tappables": [
+        {
+          "id": "sol",
+          "art": "art/sol.svg",
+          "x": 0.2,
+          "y": 0.2,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/pop.ogg",
+          "word": "El sol"
+        },
+        {
+          "id": "flor",
+          "art": "art/flor.svg",
+          "x": 0.5,
+          "y": 0.7,
+          "size": 160,
+          "anim": "wiggle",
+          "sfx": "sfx/pop.ogg",
+          "word": "Una flor",
+          "flag": "huella_1"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.8,
+          "y": 0.85,
+          "size": 300,
+          "anim": "hop",
+          "sfx": "sfx/pop.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "next": "p2"
+    },
+    "p2": {
+      "background": "art/fondo.svg",
+      "text": {
+        "simple": "Hay dos caminos.",
+        "cuento": "Hay dos caminos. Fido mira.",
+        "aventura": "Hay dos caminos. Fido mira todo con atención."
+      },
+      "characters": [
+        {
+          "id": "pipa",
+          "x": 0.3,
+          "y": 0.9,
+          "scale": 0.5
+        }
+      ],
+      "tappables": [
+        {
+          "id": "sol",
+          "art": "art/sol.svg",
+          "x": 0.2,
+          "y": 0.2,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/pop.ogg",
+          "word": "El sol"
+        },
+        {
+          "id": "flor",
+          "art": "art/flor.svg",
+          "x": 0.5,
+          "y": 0.7,
+          "size": 160,
+          "anim": "wiggle",
+          "sfx": "sfx/pop.ogg",
+          "word": "Una flor"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.8,
+          "y": 0.85,
+          "size": 300,
+          "anim": "hop",
+          "sfx": "sfx/pop.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "decision": {
+        "options": [
+          {
+            "text": "Ir por el río",
+            "image": "art/rio.svg",
+            "to": "a5"
+          },
+          {
+            "text": "Ir por el bosque",
+            "image": "art/bosque.svg",
+            "to": "b5"
+          }
+        ]
+      }
+    },
+    "a5": {
+      "background": "art/fondo.svg",
+      "text": {
+        "simple": "Pipa llega al río.",
+        "cuento": "Pipa llega al río. Fido mira.",
+        "aventura": "Pipa llega al río. Fido mira todo con atención."
+      },
+      "tappables": [
+        {
+          "id": "sol",
+          "art": "art/sol.svg",
+          "x": 0.2,
+          "y": 0.2,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/pop.ogg",
+          "word": "El sol"
+        },
+        {
+          "id": "flor",
+          "art": "art/flor.svg",
+          "x": 0.5,
+          "y": 0.7,
+          "size": 160,
+          "anim": "wiggle",
+          "sfx": "sfx/pop.ogg",
+          "word": "Una flor",
+          "flag": "huella_2"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.8,
+          "y": 0.85,
+          "size": 300,
+          "anim": "hop",
+          "sfx": "sfx/pop.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "next": "a6",
+      "secret_next": "s6"
+    },
+    "b5": {
+      "background": "art/fondo.svg",
+      "text": {
+        "simple": "Pipa llega al bosque.",
+        "cuento": "Pipa llega al bosque. Fido mira.",
+        "aventura": "Pipa llega al bosque. Fido mira todo con atención."
+      },
+      "tappables": [
+        {
+          "id": "sol",
+          "art": "art/sol.svg",
+          "x": 0.2,
+          "y": 0.2,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/pop.ogg",
+          "word": "El sol"
+        },
+        {
+          "id": "flor",
+          "art": "art/flor.svg",
+          "x": 0.5,
+          "y": 0.7,
+          "size": 160,
+          "anim": "wiggle",
+          "sfx": "sfx/pop.ogg",
+          "word": "Una flor",
+          "flag": "huella_2"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.8,
+          "y": 0.85,
+          "size": 300,
+          "anim": "hop",
+          "sfx": "sfx/pop.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "next": "b6",
+      "secret_next": "s6"
+    },
+    "a6": {
+      "background": "art/fondo.svg",
+      "text": {
+        "simple": "El río canta.",
+        "cuento": "El río canta. Fido mira.",
+        "aventura": "El río canta. Fido mira todo con atención."
+      },
+      "tappables": [
+        {
+          "id": "sol",
+          "art": "art/sol.svg",
+          "x": 0.2,
+          "y": 0.2,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/pop.ogg",
+          "word": "El sol"
+        },
+        {
+          "id": "flor",
+          "art": "art/flor.svg",
+          "x": 0.5,
+          "y": 0.7,
+          "size": 160,
+          "anim": "wiggle",
+          "sfx": "sfx/pop.ogg",
+          "word": "Una flor"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.8,
+          "y": 0.85,
+          "size": 300,
+          "anim": "hop",
+          "sfx": "sfx/pop.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "ending": {
+        "id": "rio",
+        "title": "El río que canta"
+      },
+      "next": "p7"
+    },
+    "b6": {
+      "background": "art/fondo.svg",
+      "text": {
+        "simple": "El bosque canta.",
+        "cuento": "El bosque canta. Fido mira.",
+        "aventura": "El bosque canta. Fido mira todo con atención."
+      },
+      "tappables": [
+        {
+          "id": "sol",
+          "art": "art/sol.svg",
+          "x": 0.2,
+          "y": 0.2,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/pop.ogg",
+          "word": "El sol"
+        },
+        {
+          "id": "flor",
+          "art": "art/flor.svg",
+          "x": 0.5,
+          "y": 0.7,
+          "size": 160,
+          "anim": "wiggle",
+          "sfx": "sfx/pop.ogg",
+          "word": "Una flor"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.8,
+          "y": 0.85,
+          "size": 300,
+          "anim": "hop",
+          "sfx": "sfx/pop.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "ending": {
+        "id": "bosque",
+        "title": "El bosque que canta"
+      },
+      "next": "p7"
+    },
+    "s6": {
+      "background": "art/fondo.svg",
+      "text": {
+        "simple": "Pipa encuentra el secreto.",
+        "cuento": "Pipa encuentra el secreto. Fido mira.",
+        "aventura": "Pipa encuentra el secreto. Fido mira todo con atención."
+      },
+      "tappables": [
+        {
+          "id": "sol",
+          "art": "art/sol.svg",
+          "x": 0.2,
+          "y": 0.2,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/pop.ogg",
+          "word": "El sol"
+        },
+        {
+          "id": "flor",
+          "art": "art/flor.svg",
+          "x": 0.5,
+          "y": 0.7,
+          "size": 160,
+          "anim": "wiggle",
+          "sfx": "sfx/pop.ogg",
+          "word": "Una flor"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.8,
+          "y": 0.85,
+          "size": 300,
+          "anim": "hop",
+          "sfx": "sfx/pop.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "ending": {
+        "id": "secreto",
+        "title": "El secreto",
+        "secret": true
+      },
+      "next": "p7"
+    },
+    "p7": {
+      "background": "art/fondo.svg",
+      "text": {
+        "simple": "Pipa vuelve a la plaza.",
+        "cuento": "Pipa vuelve a la plaza. Fido mira.",
+        "aventura": "Pipa vuelve a la plaza. Fido mira todo con atención."
+      },
+      "pendant": [
+        {
+          "color": "verde",
+          "at": 0.3
+        }
+      ],
+      "tappables": [
+        {
+          "id": "sol",
+          "art": "art/sol.svg",
+          "x": 0.2,
+          "y": 0.2,
+          "size": 160,
+          "anim": "bounce",
+          "sfx": "sfx/pop.ogg",
+          "word": "El sol"
+        },
+        {
+          "id": "flor",
+          "art": "art/flor.svg",
+          "x": 0.5,
+          "y": 0.7,
+          "size": 160,
+          "anim": "wiggle",
+          "sfx": "sfx/pop.ogg",
+          "word": "Una flor"
+        },
+        {
+          "id": "fido",
+          "art": "cast:fido",
+          "x": 0.8,
+          "y": 0.85,
+          "size": 300,
+          "anim": "hop",
+          "sfx": "sfx/pop.ogg",
+          "word": "¡Guau! Fido"
+        }
+      ],
+      "closing": true
+    }
+  }
+}

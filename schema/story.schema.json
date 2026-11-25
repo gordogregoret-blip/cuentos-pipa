@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gordogregoret-blip/cuentos-pipa/schema/story.schema.json",
+  "title": "Cuento de Pipa (story.json)",
+  "type": "object",
+  "required": ["schema", "id", "title", "cast", "message", "start", "pages"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": 1},
+    "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "cast": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "message": {"type": "string", "minLength": 1},
+    "start": {"type": "string"},
+    "preview": {"type": "boolean"},
+    "door_color": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+    "secret": {
+      "type": "object",
+      "required": ["requires", "page"],
+      "additionalProperties": false,
+      "properties": {
+        "requires": {"type": "array", "items": {"$ref": "#/$defs/flag"}, "minItems": 1},
+        "page": {"type": "string"}
+      }
+    },
+    "pages": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"pattern": "^[a-z0-9_]+$"},
+      "additionalProperties": {"$ref": "#/$defs/page"}
+    }
+  },
+  "$defs": {
+    "flag": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "levels": {
+      "type": "object",
+      "required": ["simple", "cuento", "aventura"],
+      "additionalProperties": false,
+      "properties": {
+        "simple": {"type": "string", "minLength": 1},
+        "cuento": {"type": "string", "minLength": 1},
+        "aventura": {"type": "string", "minLength": 1}
+      }
+    },
+    "color": {"enum": ["amarillo", "azul", "rojo", "violeta", "verde", "naranja"]},
+    "unit": {"type": "number", "minimum": 0, "maximum": 1},
+    "page": {
+      "type": "object",
+      "required": ["background", "text", "tappables"],
+      "additionalProperties": false,
+      "properties": {
+        "background": {"type": "string"},
+        "text": {"$ref": "#/$defs/levels"},
+        "pendant": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["color", "at"],
+            "additionalProperties": false,
+            "properties": {"color": {"$ref": "#/$defs/color"}, "at": {"$ref": "#/$defs/unit"}}
+          }
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "x", "y"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string"},
+              "x": {"$ref": "#/$defs/unit"},
+              "y": {"$ref": "#/$defs/unit"},
+              "scale": {"type": "number", "exclusiveMinimum": 0},
+              "state": {"type": "string"},
+              "flip": {"type": "boolean"}
+            }
+          }
+        },
+        "tappables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "art", "x", "y", "size", "anim", "sfx", "word"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+              "art": {"type": "string"},
+              "x": {"$ref": "#/$defs/unit"},
+              "y": {"$ref": "#/$defs/unit"},
+              "size": {"type": "number", "minimum": 96},
+              "anim": {"enum": ["bounce", "wiggle", "hop", "spin", "grow", "float"]},
+              "sfx": {"type": "string"},
+              "word": {"type": "string", "minLength": 1},
+              "flag": {"$ref": "#/$defs/flag"}
+            }
+          }
+        },
+        "next": {"type": ["string", "null"]},
+        "secret_next": {"type": "string"},
+        "decision": {
+          "type": "object",
+          "required": ["options"],
+          "additionalProperties": false,
+          "properties": {
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["text", "image", "to"],
+                "additionalProperties": false,
+                "properties": {
+                  "text": {"type": "string", "minLength": 1},
+                  "image": {"type": "string"},
+                  "to": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "ending": {
+          "type": "object",
+          "required": ["id", "title"],
+          "additionalProperties": false,
+          "properties": {
+            "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+            "title": {"type": "string"},
+            "secret": {"type": "boolean"}
+          }
+        },
+        "closing": {"const": true}
+      }
+    }
+  }
+}
