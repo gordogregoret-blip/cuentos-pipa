@@ -85,9 +85,9 @@ python3 tools/tts/tts.py --story stories/dino --engine kokoro --force
 La política está en `docs/privacy-policy.md` y se publica con GitHub Pages:
 
 1. El contacto de la política apunta a los *issues* del repo y al correo de la ficha de Play (que se completa en Play Console, no en el repo).
-2. En GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `/docs`**.
-   Con el plan gratuito de GitHub, Pages funciona en repositorios **públicos**. Si el repo es
-   privado, hace falta un plan pago o publicar la política en otro lugar.
+2. En GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions** (un solo clic,
+   solo el dueño del repo puede hacerlo). Desde ahí, el workflow `.github/workflows/pages.yml` publica
+   `docs/` en cada push. Para publicarlo ya: *Actions → Publicar política de privacidad → Run workflow*.
 3. La URL queda en `https://gordogregoret-blip.github.io/cuentos-pipa/privacy-policy`. Es la misma
    que usan `src/core/Links.gd` y la ficha de Play.
 
